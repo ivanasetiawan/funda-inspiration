@@ -1,0 +1,14 @@
+.container
+  .row.pagination
+    .xs-12.center-text
+      - if history_button
+        = link_to "Toon oudere evenementen", "#", :class => "view-history"
+
+      %ol.list-horizontal.unstyled-list
+        %li.pagination__item.is-active= link_to "1", "#"
+        %li.pagination__item= link_to "2", "#"
+        %li.pagination__item= link_to "3", "#"
+        %li.pagination__item= link_to "4", "#"
+        %li.pagination__item= link_to "5", "#"
+        %li.pagination__item= link_to "6", "#"
+        %li.pagination__item.pagination__item--button= link_to "Volgende", "#"

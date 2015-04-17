@@ -1,0 +1,14 @@
+$zindex-navigation: 1000 !default;
+$zindex-hero: 200 !default;
+$zindex-main: 300 !default;
+$zindex-footer: 100 !default;
+
+$compile: (
+	normalize: true,
+	grid: true,
+	spacing: true
+) !default;
+//debug level 0 = disable debug, 
+//debug level 1 = develop, shows warning, but compiles all the templates
+//debug level 2 = same as level 1, but omits compiling certain css (such as normalize for example), this speeds up development and compile time
+$debug-level: 1 !default;

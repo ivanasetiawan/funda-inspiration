@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="25px" height="31px" viewBox="0 0 25 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Product" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="AHREND---Product-detail---with-video---1320px" sketch:type="MSArtboardGroup" transform="translate(-906.000000, -4051.000000)" fill="#FFFFFF">
+            <g id="Extra-video" sketch:type="MSLayerGroup" transform="translate(140.000000, 3876.000000)">
+                <g id="Video" transform="translate(228.000000, 0.500000)" sketch:type="MSShapeGroup">
+                    <g id="video" transform="translate(513.000000, 155.000000)">
+                        <path d="M49.2395,33.7173212 L27.836,20.4573656 C26.2765,19.433869 25,20.1868665 25,22.13036 L25,47.8702738 C25,49.8127673 26.2765,50.5657648 27.836,49.5432682 L49.2395,36.2833126 C49.2395,36.2833126 50,35.7483144 50,35.0003169 C50,34.2523194 49.2395,33.7173212 49.2395,33.7173212 L49.2395,33.7173212 Z" id="arrow"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+%article.container.content--horizontal
+  .row
+    .xs-12.lg-2.xs-pt-2.xs-pb-2
+      %h2.h3= t('designer')
+    .xs-12.lg-10
+      .xs-pt-2.xs-pb-2.bg-white.clearfix
+        - designer = data.people.sample
+        .xs-12.md-4.center-text
+          = image_tag "designer.jpg"
+        .xs-12.md-8
+          %h2.h1= designer.name
+          %p= designer.description
+          %p= link_to "#{t('more_about')} #{designer.name}", "#" 
+            

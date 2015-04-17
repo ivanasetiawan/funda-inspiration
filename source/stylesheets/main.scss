@@ -1,0 +1,12 @@
+@import "mangrove"; //Imports the framework
+
+// //Project base stuff
+@import "project/base/**";
+
+// //Mangrove components
+// // @import "mangrove/components/accordion";
+// // @import "mangrove/components/nav";
+
+// // Project components and templates
+@import "project/components/**";
+@import "project/vendor/**";

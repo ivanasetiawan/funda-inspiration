@@ -1,0 +1,11 @@
+.info-block {
+  max-width: 320px;
+  &__heading, &__socials { padding: 30px; }
+  &__heading {
+    h3, p { color: cl("white"); }
+  }
+  &__socials {
+    a { color: cl("black"); }
+    li { margin-bottom: 0; }
+  }
+}

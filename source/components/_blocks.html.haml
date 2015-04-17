@@ -1,0 +1,43 @@
+.container
+	.row
+		- if type == 1
+			-# Type 1
+			.xs-12.blocks
+				.lg{:class => "b-lazy", :data => {"src" => "images/silver_chair.jpg", "src-sm" => "images/silver_chair.jpg", "src-md" => "images/silver_chair.jpg", "src-lg" => "images/silver_chair.jpg", "src-xl" => "images/silver_chair.jpg"}}
+				.long{:class => "b-lazy popup-video", :href => "http://www.youtube.com/watch?v=-jmBO6Smits", :data => {"src" => "images/block-long-sm.jpg", "src-sm" => "images/block-long-sm.jpg", "src-md" => "images/block-long-md.jpg", "src-lg" => "images/block-long-lg.jpg", "src-xl" => "images/block-long-lg.jpg"}}
+				.sm{:class => "b-lazy", :data => {"src" => "images/blue_desk.jpg", "src-sm" => "images/blue_desk.jpg", "src-md" => "images/blue_desk.jpg", "src-lg" => "images/blue_desk.jpg", "src-xl" => "images/blue_desk.jpg"}}
+				.sm{:class => "b-lazy", :data => {"src" => "images/green_chair.jpg", "src-sm" => "images/green_chair.jpg", "src-md" => "images/green_chair.jpg", "src-lg" => "images/green_chair.jpg", "src-xl" => "images/green_chair.jpg"}}
+
+		- elsif type == 2
+			-# Type 2
+			.xs-12.blocks
+				.lg{:class => "b-lazy", :data => {"src" => "images/block-lg-sm.jpg", "src-sm" => "images/block-lg-sm.jpg", "src-md" => "images/block-lg-md.jpg", "src-lg" => "images/block-lg-lg.jpg", "src-xl" => "images/block-lg-sm.jpg"}}
+				.lg{:class => "b-lazy", :data => {"src" => "images/block-lg-sm.jpg", "src-sm" => "images/block-lg-sm.jpg", "src-md" => "images/block-lg-md.jpg", "src-lg" => "images/block-lg-lg.jpg", "src-xl" => "images/block-lg-sm.jpg"}}
+
+		- elsif type == 3
+			-# Type 3
+			.xs-12.blocks
+				.lg{:class => "b-lazy", :data => {"src" => "images/block-lg-sm.jpg", "src-sm" => "images/block-lg-sm.jpg", "src-md" => "images/block-lg-md.jpg", "src-lg" => "images/block-lg-lg.jpg", "src-xl" => "images/block-lg-sm.jpg"}}
+				.sm{:class => "b-lazy", :data => {"src" => "images/block-sm-lg.jpg", "src-sm" => "images/block-sm-lg.jpg", "src-md" => "images/block-sm-lg.jpg", "src-lg" => "images/block-sm-lg.jpg", "src-xl" => "images/block-sm-lg.jpg"}}
+				.sm{:class => "b-lazy", :data => {"src" => "images/block-sm-lg.jpg", "src-sm" => "images/block-sm-lg.jpg", "src-md" => "images/block-sm-lg.jpg", "src-lg" => "images/block-sm-lg.jpg", "src-xl" => "images/block-sm-lg.jpg"}}
+				.long{:class => "b-lazy", :data => {"src" => "images/block-long-sm.jpg", "src-sm" => "images/block-long-sm.jpg", "src-md" => "images/block-long-md.jpg", "src-lg" => "images/block-long-lg.jpg", "src-xl" => "images/block-long-lg.jpg"}}
+
+		- elsif type == 4
+			-# Type 4
+			.xs-12.blocks
+				.lg{:class => "b-lazy", :data => {"src" => "images/block-lg-sm.jpg", "src-sm" => "images/block-lg-sm.jpg", "src-md" => "images/block-lg-md.jpg", "src-lg" => "images/block-lg-lg.jpg", "src-xl" => "images/block-lg-sm.jpg"}}
+				.tall{:class => "b-lazy", :data => {"src" => "images/block-tall-sm.jpg", "src-sm" => "images/block-tall-sm.jpg", "src-md" => "images/block-tall-md.jpg", "src-lg" => "images/block-tall-lg.jpg", "src-xl" => "images/block-tall-sm.jpg"}}
+				.sm{:class => "b-lazy", :data => {"src" => "images/block-sm-lg.jpg", "src-sm" => "images/block-sm-lg.jpg", "src-md" => "images/block-sm-lg.jpg", "src-lg" => "images/block-sm-lg.jpg", "src-xl" => "images/block-sm-lg.jpg"}}
+				.sm{:class => "b-lazy", :data => {"src" => "images/block-sm-lg.jpg", "src-sm" => "images/block-sm-lg.jpg", "src-md" => "images/block-sm-lg.jpg", "src-lg" => "images/block-sm-lg.jpg", "src-xl" => "images/block-sm-lg.jpg"}}
+
+		- elsif type == 5
+			-# Type 5
+			.xs-12.blocks
+				.tall{:class => "b-lazy", :data => {"src" => "images/block-tall-sm.jpg", "src-sm" => "images/block-tall-sm.jpg", "src-md" => "images/block-tall-md.jpg", "src-lg" => "images/block-tall-lg.jpg", "src-xl" => "images/block-tall-sm.jpg"}}
+				.tall{:class => "b-lazy", :data => {"src" => "images/block-tall-sm.jpg", "src-sm" => "images/block-tall-sm.jpg", "src-md" => "images/block-tall-md.jpg", "src-lg" => "images/block-tall-lg.jpg", "src-xl" => "images/block-tall-sm.jpg"}}
+				.sm{:class => "sm__text"}
+					%p 
+						We hielpen Nuon met de overgestap naar een papierloos kantoor en 
+						= link_to 'Het Nieuwe Werken.', '#'
+				.sm{:class => "b-lazy", :data => {"src" => "images/block-sm-lg.jpg", "src-sm" => "images/block-sm-lg.jpg", "src-md" => "images/block-sm-lg.jpg", "src-lg" => "images/block-sm-lg.jpg", "src-xl" => "images/block-sm-lg.jpg"}}
+				.long{:class => "b-lazy", :data => {"src" => "images/block-long-sm.jpg", "src-sm" => "images/block-long-sm.jpg", "src-md" => "images/block-long-md.jpg", "src-lg" => "images/block-long-lg.jpg", "src-xl" => "images/block-long-lg.jpg"}}

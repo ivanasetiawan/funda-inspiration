@@ -1,0 +1,50 @@
+.container.xs-mb-2
+	.row
+		%article.content-focused
+			%header.xs-12.lg-3.xs-pt-2.xs-pb-2
+				%span.tag design
+				%h2 Dit is het meest duurzame gebouw ter wereld
+				%p Kantoorgebouw The Edge heeft het BREEAM ontwerpcertificaat ‘Outstanding’ gekregen en is daarmee het meest duurzame kantoorgebouw ter wereld.
+
+				= link_to "author.html", class: "author xs-mb-1" do
+					.author__avatar
+						= image_tag "author.jpg"
+					%h4.no-margin Janneke van der Wey
+					%p.no-margin ruimtelijk ontwerper bij Ahrend
+
+				%time 19 januari 2015
+
+			.content-focused__content.xs-12.lg-9
+				%img{:class => "b-lazy", :src => "images/blog-header.jpg", :data => {"src" => "images/blog-header.jpg", "src-sm" => "images/blog-header.jpg", "src-md" => "images/blog-header.jpg", "src-lg" => "images/blog-header.jpg", "src-xl" => "images/blog-header.jpg"}}
+
+				.content-focused__share
+					%p Deel dit bericht
+					%ul.list-unstyled.list-horizontal.horizontal-icons
+						%li= link_to "", "https://www.facebook.com/ahrendinrichten", class: "icon-facebook"
+						%li= link_to "", "https://www.linkedin.com/company/ahrend", class: "icon-linkedin"
+						%li= link_to "", "https://twitter.com/ahrendoffice", class: "icon-twitter"
+						%li= link_to "", "http://pinterest.com/ahrend", class: "icon-pinterest"
+
+
+				%p Volgens Building Research Establishment (BRE), de wereldwijde beoordelaar van duurzame gebouwen, is dit de hoogste score die ooit is afgegeven voor nieuwe gebouwen. Ahrend heeft The Edge, gevestigd op de Amsterdamse ZuidAs, ingericht op de thema’s duurzaamheid, Activiteit Gerelateerd Werken en ergonomie.
+
+				%figure
+					%div
+						%img{:class => "b-lazy", :src => "images/blog-fig1.jpg", :data => {"src" => "images/blog-fig1.jpg", "src-sm" => "images/blog-fig1.jpg", "src-md" => "images/blog-fig1.jpg", "src-lg" => "images/blog-fig1.jpg", "src-xl" => "images/blog-fig1.jpg"}}
+					%figcaption Ahrend heeft met de inrichting een gezonde werkomgeving gecreëerd die projectmatig en collaboratief werken faciliteert en stimuleert. 
+
+				%p Ahrend was al in een vroegtijdig stadium als partner betrokken bij dit prestigieuze project. Bij het uitwerken heeft Ahrend vernieuwende trends en toepassingen op het gebied van Activiteit Gerelateerd Werken en ergonomie meegenomen. Een voorbeeld hiervan is de integratie van Ahrend Puk: een geïntegreerde werkplekoplossing voor het draadloos opladen van smartphones. Ahrend heeft met de inrichting een gezonde werkomgeving gecreëerd die projectmatig en collaboratief werken faciliteert en stimuleert. Voor Deloitte, de hoofdhuurder, en AKD notaris- en advocatenkantoor was dit een van de speerpunten. 
+
+				%blockquote
+					%p 
+						Wij zijn trots dat wij met onze expertise hebben bijgedragen aan de realisatie van het meest 
+						%em duurzame
+						kantoorgebouw in de wereld
+					%footer
+						%cite Eugène Sterken, CEO at Ahrend
+
+				%p Volgens Building Research Establishment (BRE), de wereldwijde beoordelaar van duurzame gebouwen, is dit de hoogste score die ooit is afgegeven voor nieuwe gebouwen. Ahrend heeft The Edge, gevestigd op de Amsterdamse ZuidAs, ingericht op de thema’s duurzaamheid, Activiteit Gerelateerd Werken en ergonomie.
+
+= partial "components/related", locals: { amount: 3 }
+
+= partial "components/articles", locals: { title: "Uit ons journal", articles: data.articles.journal }

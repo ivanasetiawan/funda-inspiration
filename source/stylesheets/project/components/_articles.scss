@@ -1,0 +1,96 @@
+.articles {
+  h2 { color: cl("grey-text"); }
+  &__list {
+    padding: 0;
+    @include bp("sm+") {
+      .flexbox & {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+    }
+  }
+  &__item {
+    h3 {
+      @extend .h4;
+      color: cl("black");
+    }
+    img {
+      width: 100%;
+      display: block;
+    }
+    @include bp("sm+") {
+      width: 33.33%;
+      vertical-align: top;
+      display: table-cell;
+      .flexbox & {
+        display: flex;
+        flex: 1;
+      }
+    }
+  }
+  &__inner {
+    color: cl("black");
+    width: 100%;
+    &:hover { color: cl("black"); }
+    @include bp("sm+") {
+      .flexbox & {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    }
+  }
+  &__text {
+    background-color: cl("white");
+    padding: 15px;
+    @include bp("sm+") {
+      padding: 20px 30px;
+      flex: 1;
+      border-right: 1px solid cl("grey-light");
+      float: right;
+      .flexbox & { float: none; }
+    }
+    @include bp("md+") { 
+      width: 65%;
+      border: none;
+    }
+  }
+}
+
+.article {
+  h2 { 
+    a { color: cl("black"); }
+    @include font-scaling(1.2em, 1.625em);
+  }
+  &__text { padding: 20px; }
+  &__image {
+    min-height: 280px;
+    background-size: cover;
+    display: block;
+  }
+  @include bp("md+") { 
+    display: table-row;
+    &__text, &__image { 
+      width: 50%;
+      display: table-cell;
+    }
+    &__text { padding: 40px; }
+  }
+}
+
+.author {
+  $size: 55px;
+  position: relative;
+  padding-left: 75px;
+  display: block;
+  color: cl("black");
+  min-height: $size;
+  &__avatar {
+    width: $size;
+    height: $size;
+    left: 0;
+    top: 0;
+    position: absolute;
+  }
+}

@@ -1,0 +1,70 @@
+$nav: (
+	size: 44px,			//Size of the button
+	distance: 44px / 8, //Distance between lines
+	padding: 5px,		//Padding on the left- and right side
+	animDuration: .2s,  //Duration of the animation
+	lineColor: #000,	//Line color of the nav
+	lineHeight: 5px,	//The height of the patties/burgers
+	bgColor: #fff 		//Background color for the button
+) !default;
+
+//Just the button
+.menu {
+	padding: map-get($nav, padding);
+	display: inline-block;
+	width: map-get($nav, size);
+	height: map-get($nav, size);
+
+	border: 1px solid map-get($nav, lineColor);
+	border-radius: 0;
+	background: map-get($nav, bgColor);
+	outline: none;
+}
+
+//Draws the rectangles
+.i-menu:before,
+.i-menu:after,
+.i-menu {
+	display: inline-block;
+	width: 100%;
+	height: map-get($nav, lineHeight);
+	background: #000;
+	
+	//Set up transition while hovering over
+	transition: 
+		top map-get($nav, animDuration) map-get($nav, animDuration) ease,
+		background-color 0 map-get($nav, animDuration) ease, 
+		transform map-get($nav, animDuration) ease;
+}
+//Positioning
+.i-menu {
+	position: relative;
+	top: 50%;
+	margin-top: - map-get($nav, lineHeight) * .5;
+	vertical-align: middle;
+	
+	&:before {top: map-get($nav, distance) * -2; }
+	&:after {top: map-get($nav, distance) * 2; }
+	
+	&:before, &:after {
+		position: absolute;
+		left: 0;
+		content: '';
+		transform-origin: center;
+	}
+}
+.is-nav-active {
+	//Prevents scrolling on the body
+	overflow: hidden;
+	//Animation from three lines to two
+	.i-menu { 
+		background-color: transparent;
+		&:before, &:after {
+			//Update transition delay so it reverses on mouse out
+			transition-delay: 0, 0, map-get($nav, animDuration);
+			top: 0;
+		}
+	}
+	.i-menu:before {transform: rotate(-45deg);}
+	.i-menu:after {	transform: rotate(45deg);}
+}

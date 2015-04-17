@@ -1,0 +1,21 @@
+// *******************************************************************************
+// * Scale font
+// *******************************************************************************
+// Scales the font linearly, or for each breakpoint.
+@mixin font-scaling($sizes...) {
+	//Linear scaling between two points, otherwise use argument points 
+	$scale: if(length($sizes) == 2, (nth($sizes, 2) - nth($sizes, 1)) / (length($breakpoints) - 1), false);
+	$i: 0;
+	$oldSize: "";
+	@each $key, $value in $breakpoints {
+		$newSize: if($scale, nth($sizes,1) + ($i*$scale), nth($sizes, $i+1));
+		//Only output new media query when there's a new fontsize
+		@if $oldSize != $newSize {
+			@include bp($value) {
+				font-size: $newSize;
+			}
+		}
+		$oldSize: $newSize;
+		$i: $i + 1;
+	}
+}

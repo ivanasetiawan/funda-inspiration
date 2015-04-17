@@ -1,0 +1,10 @@
+---
+title: Articles
+---
+
+= partial "components/articles/overview-header"
+
+- 10.times do
+  = partial "components/articles/article", locals: { type: "blog" }
+
+= partial "components/pagination", locals: { history_button: false }

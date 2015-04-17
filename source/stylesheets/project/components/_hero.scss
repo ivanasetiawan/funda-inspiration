@@ -1,0 +1,127 @@
+%hero-height {
+	min-height: em(250px);
+	@include bp("sm+") { height: em(350px); }
+	@include bp("md+") { height: em(450px); }
+	@include bp("lg+") { height: em(550px); }
+}
+
+.hero {
+	background-size: cover;
+	background-position: top center;
+	background-repeat: no-repeat;
+	width: 100%;
+	@extend %hero-height;
+
+	p, h2 { margin: 0; }
+
+	&__wrap {
+		@extend %hero-height;
+		position: relative;
+		max-width: map-get($container-maxwidth, "lg");
+		margin: 0 auto;
+	}
+
+	&__caption {
+		background-color: cl("grey-dark");
+		padding: map-get($gutters, "xs");
+		color:  cl("white");
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		box-sizing: border-box;
+
+		@include bp("sm+") {
+			width: 50%;
+			padding: map-get($gutters, "md");
+		}
+		@include bp("md+") {
+			width: 40%;
+		}
+	}
+
+	&--project {
+		dl { margin-top: 0; }
+
+		&__info {
+			
+			// // temp - make it in theme
+			// background: #ac8940;
+			// color: cl("white");
+
+			@include bp("md+") {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				width: 40%;
+				bottom: -20%;
+			}
+		}
+	}
+
+	&--tall {
+		@include bp("lg+") {
+			height: em(700px);
+		}
+	}
+
+	&__project-sub {
+		padding: map-get($gutters, "sm");
+
+		@include bp("md+") {
+			padding: map-get($gutters, "sm") map-get($gutters, "md");
+		}
+
+		@at-root & + & {
+			background: cl("white");
+			color: cl("grey-dark");
+		}
+	}
+
+	&__share {
+
+		> span { 
+			display: block;
+			margin: 5px 10px 0 0;
+			float: left; 
+		}
+	}
+
+
+	&--split {
+		padding: map-get($gutters, "sm");
+		@extend .clearfix;
+
+		@include bp("md+") {
+			max-width: em(800px);
+			margin: 0 auto;
+			padding-top: map-get($gutters, "lg");
+			padding-bottom: map-get($gutters, "lg");
+		}
+
+	}
+
+	&__split-text {
+		@include bp("md+") {
+			float: left;
+			width: 50%;
+		}
+	}
+
+	&__split-image {
+		@include bp("md+") {
+			float: right;
+			width: 50%;
+		}
+	}
+}
+
+
+// Flickity effect
+.gallery-flickity {
+	&:hover {
+		button { opacity: 0.5; 
+			&:hover { opacity: 1; }
+		}
+	}
+}

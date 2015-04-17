@@ -1,0 +1,9 @@
+= partial "components/events/overview-header"
+
+%article.xs-mt-1.xs-mb-1.container
+  .row
+    .xs-12.events-list
+      - data.events.each do |event|
+        = partial "components/event", locals: { event: event }
+
+= partial "components/pagination", locals: { history_button: true }

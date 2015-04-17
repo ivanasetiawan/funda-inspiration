@@ -1,0 +1,16 @@
+%article.container.content--horizontal.xs-pb-4.more-info
+  .row
+    .xs-12.md-2
+      %h2.h3= t('more_info')
+    .xs-12.md-10
+      .bg-white.xs-pt-2.xs-pb-2.clearfix.more-info__inner.b-lazy{data: {"src" => "images/manager.jpg", "src-sm" => "images/manager.jpg", "src-md" => "images/manager.jpg", "src-lg" => "images/manager.jpg", "src-xl" => "images/manager.jpg"} }
+        .xs-12.sm-3.more-info__photo &nbsp;
+        .xs-12.sm-6.md-4
+          %h3 Peter van Ahrend
+          %ul.list-unstyled
+            %li Projectmanager bij Ahrend
+            %li Bel 1234 56 789
+            %li= link_to "peter@ahrend.nl", "mailto:peter@ahrend.nl"
+        .xs-12.sm-6.md-5
+          = link_to t('contact_us'), "", class: "button button--big"
+            

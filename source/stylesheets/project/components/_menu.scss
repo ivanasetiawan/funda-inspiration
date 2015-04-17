@@ -1,0 +1,552 @@
+// Main menu on top header
+
+.ahrend {
+	color: cl("red");
+	display: inline-block;
+	position: relative;
+
+	&:before {
+		position: absolute;
+		left: 0;
+		height: 50px;
+	}
+
+	@include bp("md+") { 
+		width: 120px;
+		height: 50px;
+		vertical-align: middle;
+		float: left;
+		margin-top: em(20px);
+		&:before { font-size: 120px; }
+	}
+
+	@include bp("md-") { 
+		padding: 10px 0;
+		width: 90px;
+		height: 30px;
+		position: relative;
+		z-index: 101;
+		&:before { font-size: 90px; }
+		
+		.active & {
+			position: fixed;
+			top: 0;
+			left: 50%; 
+			margin-left: -45px;
+		}
+	}
+
+	@at-root .is-sticky & {
+		@include bp("md+") {
+			margin-top: em(10px);
+			width: em(90px); 
+			height: em(30px);
+
+			&:before {
+				font-size: em(90px);
+				height: 0.33em;
+			}
+		}
+	}
+
+}
+
+////////
+// Animation
+@-webkit-keyframes slideDown {
+	0% { 
+		opacity: 0; 
+		margin-top: -100px;
+	}
+	100% { 
+		opacity: 1;
+		margin-top: 0;
+	}
+}
+
+@keyframes slideDown {
+	0% { 
+		opacity: 0; 
+		margin-top: -100px;
+	}
+	100% { 
+		opacity: 1;
+		margin-top: 0;
+	}
+}
+////////
+
+.menu {
+	background-color: cl("white");		
+
+	.container { position: relative; }
+
+	// Specific for sticky menu MD+
+	&.is-sticky {
+		@include bp("md+") { 
+			height: em(60px);
+			line-height: em(60px);
+			position: fixed;
+			z-index: 200;
+			top: 0;
+			animation: slideDown 0.2s;
+
+			&.active {
+				.menu__close, 
+				.menu__nav, 
+				li { 
+					display: block; 
+				}
+			
+				.menu__nav, 
+				li { 
+					margin-left: 0;
+					line-height: 42px;
+					font-size: 32px;
+				}
+
+				.menu__nav > ul > li {
+					&:last-child { border-bottom: 0; }
+					
+					> a {
+						display: block;
+						padding: 20px;
+						border-bottom: solid 1px cl("grey-medium");
+						margin-top: -1px;
+						position: relative;
+
+						&:before { 
+							display: inline-block; 
+							font-size: 15px;
+							position: absolute;
+							top: 50%;
+							right: 20px;
+						}
+					}
+				}
+
+				.show-sub .menu__sub {
+					position: relative;
+					top: auto;
+					height: auto;
+					display: block;
+					border-bottom: solid 1px cl("grey-medium");
+					padding-top: 15px;
+					padding-bottom: 20px;
+
+					a { 
+						color: cl("grey-text"); 
+						font-size: 20px;
+					}
+
+					li { 
+						padding: 5px 0; 
+						margin-left: em(50px); 
+						line-height: 1.5;
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
+	// END: Specific for sticky menu MD+
+
+	ul { @extend %clearlist; }
+
+	a {
+		&:hover, .clicked {
+			color: cl("red");
+		}
+	}
+
+	// For body when menu is active
+	&-active { overflow-y: hidden; }
+
+	&.active {
+		@at-root & > .menu__close { 
+			@include bp("md-") { display: block; }
+		}
+	}
+
+	@include bp("md-") { 
+		&.active { 
+			.menu__hamburger { display: none; }
+		}
+	}
+
+	@include bp("md+") {
+		height: em(80px);
+		line-height: em(80px);
+		position: relative;
+	}
+
+	li  {
+		@include bp("md+") { display: inline-block; }
+	}
+	
+	&__nav {
+		text-align: left;
+		font-size: em(15px);
+		line-height: 1;
+
+		a { color: cl("grey-dark"); }
+
+		@at-root .is-sticky & {
+			@include bp("md+") { 
+				display: none;
+				animation: slideDown 0.2s;
+
+				// White fixed bg overlay			
+				position: fixed;
+				overflow-y: auto;
+				background: cl("white");
+				width: 100%;
+				height: 100%;
+				padding: map-get($gutters, "lg") map-get($gutters, "sm") map-get($gutters, "sm"); 
+				z-index: 100;
+				top: 0;
+				left: 0;
+				box-sizing: border-box;
+				// White fixed bg overlay	
+
+				&.show-menu {
+					display: block;
+
+					> ul {
+						width: 40%;
+						max-width: em(600px);
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						margin-right: -50%;
+						margin-top: -1px;
+						transform: translate(-50%, -50%);	
+					}
+
+				}
+			}
+		}
+
+		> ul {
+			@include bp("md-") { 
+				max-width: em(600px); 
+				margin: 0 auto; 
+			}
+		}
+
+		> ul > li {
+
+			@at-root &.show-sub {
+				> a { 
+					color: cl("red"); 
+					&:before { content: "\f110"; }
+				}
+			}
+
+			// Show icon only when necessary
+			> a { 
+				@extend .icon-arrow-down;
+				&:before { display: none; }
+			}
+
+			@include bp("md-") {
+				&:last-child { border-bottom: 0; }
+				
+				> a {
+					display: block;
+					padding: 8px 10px;
+					margin-top: -1px;
+					border-bottom: solid 1px cl("grey-medium");
+					position: relative;
+
+					&:before { 
+						display: inline-block; 
+						font-size: 12px;
+						position: absolute;
+						top: 18px;
+						right: 0;
+						color: cl("grey-arrow");
+					}
+				}
+			}
+		}
+
+		@include bp("md-") { 
+			display: none; 
+			font-size: em(20px);
+
+			// White background fixed overlay.
+			position: fixed;
+			overflow-y: auto;
+			background: cl("white");
+			width: 100%;
+			height: 100%;
+			padding: map-get($gutters, "lg") map-get($gutters, "sm") map-get($gutters, "sm"); 
+			z-index: 100;
+			top: 0;
+			left: 0;
+			box-sizing: border-box;
+			// end
+			
+			&.show-menu { 
+				display: block; 
+
+				> ul {
+					width: 70%;
+					max-width: em(600px);
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					margin-right: -50%;
+					margin-top: -1px;
+					transform: translate(-50%, -50%);	
+				}
+			}
+		}
+
+		@include bp("md+") {
+			float: left;
+			margin-top: em(45px);
+			li { margin-left: em(20px); }
+		}
+
+	}
+
+	&__sub {
+		z-index: -1;
+		opacity: 0;
+
+		@at-root .show-sub & {
+			transition: opacity 0.2s, transform 0.4s;
+			opacity: 1;
+			z-index: 2;
+			transform: translateY(0);
+			transition: z-index 0.1s, opacity 0.8s, transform 0.2s;
+			
+			@include bp("md-") {
+				display: block;
+				border-bottom: solid 1px cl("grey-medium");
+				li { padding: 5px 0; }
+			}
+
+		}
+
+		@include bp("md-") {
+			display: none;
+			li { margin-left: em(20px); }
+			a { color: cl("grey-text"); }
+		}
+		
+		@include bp("md+") {
+			width: 100%;
+			position: absolute;
+			top: em(80px);
+			left: 0;
+			transform: translateY(-100%);
+			line-height: 50px;
+			height: 50px;		
+			background: rgba(255, 255, 255, 0.85);
+		}
+	}
+
+	&__hamburger,
+	&__close {
+		display: none; 
+		cursor: pointer;
+		width: 25px;
+		height: 25px;
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		color: cl("grey-text");
+
+		@include bp("md-") { display: block; }
+	}
+
+	&__hamburger {
+		width: 75px;
+		right: 50px;
+		top: em(15px);
+		text-transform: uppercase;
+		
+		span, &:before {
+			position: absolute;
+			top: 7px;
+			line-height: 1;
+		}
+
+		&:before { right: 0; }
+		
+		@at-root .is-sticky & {
+			@include bp("md+") { 
+				display: block;
+				top: em(15px);
+				right: em(60px);
+			}
+		}
+
+	}
+
+	&__close {
+		left: auto;
+		right: 15px;
+		top: 0;
+		position: fixed;
+		z-index: 102;
+		display: none;
+		background: cl("white");
+
+		@include bp("md-") {
+			.active & { display: block; }
+			top: 15px;
+		}
+
+		@at-root .is-sticky .active & {
+			@include bp("md+") { display: block; }
+		}
+	}
+
+	&__language-switch {
+		font-size: em(15px);
+		line-height: 1;
+		z-index: 3;
+		text-align: right;
+		display: none;
+
+		@include bp("md+") {
+			display: block;
+			position: absolute;
+			top: em(30px);
+			right: em(70px);
+			padding: em(15px);
+		}
+
+		@at-root .is-sticky & {
+			@include bp("md+") {
+				top: em(10px);
+				right: 140px;
+			}
+		}
+
+		a { color: cl("grey-text"); }
+
+		li {
+			cursor: pointer;
+			display: none;
+			margin-bottom: 0;
+			margin-top: 0.8em;
+			&.current {
+				margin-top: 0;
+				display: block; 
+				position: relative;
+				padding-right: em(20px);
+				padding-bottom: em(20px);
+				@extend .icon-arrow-down;
+				&:before {	
+					font-size: 10px;
+					position: absolute;
+					right: 0;
+					top: 5px;
+					color: cl("grey-text");	
+				}
+			}
+		}
+
+		&.show-select {
+			li { display: block; 
+				&.current {
+					border-bottom: solid 1px cl("grey-medium");
+				}
+			}
+			
+			@include bp("md+") {
+				background: cl("white");
+				box-shadow: 0 0 3px cl("grey-light");
+			}
+		}
+	}
+	
+	&__search {
+		> .icon-search {
+			position: absolute;
+			top: 7px;
+			right: 30px;
+			color: cl("grey-text");
+			cursor: pointer;
+			font-size: em(20);
+
+			@at-root .is-sticky & {
+				@include bp("md+") {
+					top: 0;
+				}
+			}
+
+			@include bp("md-") {
+				right: 10px;
+				top: 17px;
+			}
+		}
+
+		&.show-search {
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			background: cl("white");
+			z-index: 100;
+			top: 0;
+			left: 0;
+
+			> .icon-search { display: none; }
+			> .icon-close { display: block; }
+
+			@at-root & .menu__input {
+				display: block;
+			}
+		}
+	}
+
+	&__input {
+		width: 50%;
+		height: 80px;
+		padding-right: 50px;
+		box-sizing: border-box;
+		background: cl("grey-light");
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -30%;
+		margin-top: -40px;
+
+		display: none;
+
+		@include bp("md-") {
+			height: 50px;
+			width: 80%;
+			margin-left: -40%;
+			margin-top: -25px;
+		}
+
+		.icon-search {
+			font-size: em(25px);
+			color: cl("grey-text");
+			position: absolute;
+			top: 2px;
+			right: 20px;
+			@include bp("md-") {
+				top: 12px;
+			}
+		}
+
+		input {
+			background: transparent;
+			border: 0;			
+			width: 100%;
+			padding: 15px;
+
+			@include bp("md+") {
+				margin-top: 5px;
+				font-size: em(40px);
+			}
+		}
+	}
+}

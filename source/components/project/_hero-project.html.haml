@@ -1,0 +1,31 @@
+%article
+		
+	.hero.hero--project{:class => "b-lazy", :data => {"src" => "images/hero-project-sm.jpg", "src-sm" => "images/hero-project-sm.jpg", "src-md" => "images/hero-project-md.jpg", "src-lg" => "images/hero-project-lg.jpg", "src-xl" => "images/hero-project.jpg"}}
+		.hero__wrap
+			.hero--project__info
+				.hero__project-sub.theme__box
+					%dl
+						%dt Architect
+						%dd Peter van de Achternaam
+						%dt Jaar
+						%dd 2011-2014
+						%dt Land
+						%dd Nederland
+						%dt Locatie
+						%dd Utrecht
+						%dt Fotograaf
+						%dd Jos van de Plaatjes
+
+				.hero__project-sub
+					%p Meer informatie? Bel 0123 456 789
+						
+					.hero__share
+						%span Delen
+						%ul.list-unstyled.list-horizontal.horizontal-icons
+							%li= link_to "", "https://www.facebook.com/ahrendinrichten", class: "icon-facebook"
+							%li= link_to "", "https://www.linkedin.com/company/ahrend", class: "icon-linkedin"
+							%li= link_to "", "https://twitter.com/ahrendoffice", class: "icon-twitter"
+							%li= link_to "", "https://www.youtube.com/user/AhrendOffice", class: "icon-youtube"
+							%li= link_to "", "", class: "icon-instagram"
+							%li= link_to "", "http://pinterest.com/ahrend", class: "icon-pinterest"
+							%li= link_to "", "", class: "icon-google-plus"	

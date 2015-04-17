@@ -1,0 +1,18 @@
+.accordion__title {
+	cursor: pointer;
+}
+.accordion__content {
+	transition: 
+		opacity .3s ease-in-out, 
+		max-height .3s ease-in-out;
+
+	//Hide by default, but in a way that is still animateable
+	height: 0; opacity: 0; visibility: hidden; overflow: hidden;max-height: 0;
+
+	.is-active + & {
+		visibility: visible;
+		height: auto;
+		opacity: 1;
+		max-height: 20em;
+	}
+}

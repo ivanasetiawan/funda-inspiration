@@ -1,0 +1,21 @@
+.button {
+  @extend %unselectable;
+  transition: background-color 0.2s ease-in-out;
+  color: cl("white");
+  background-color: cl("red");
+  display: inline-block;
+  padding: 0.7em 1.25em;
+  text-transform: lowercase;
+  cursor: pointer;
+  // Some definitions to style input submit
+  border: none;
+  &:hover {
+    background-color: darken(cl("red"), 5%);
+    color: cl("white");
+  }
+}
+
+.button--big {
+  padding: 1em 1.8em;
+  text-transform: none;
+}

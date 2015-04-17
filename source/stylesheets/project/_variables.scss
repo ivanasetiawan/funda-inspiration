@@ -1,0 +1,89 @@
+// *******************************************************************************
+// * TYPOGRAPHY
+// *******************************************************************************
+//What's part of the output and what isn't
+$compile: (
+	normalize: false,
+	grid: true,
+	spacing: true,
+);
+// *******************************************************************************
+// * TYPOGRAPHY
+// *******************************************************************************
+$font-size-default: 16px;
+$font-sans-serif: 'Atlas Grotesk Detail', 'Source Sans Pro', sans-serif;
+
+// *******************************************************************************
+// * GRID
+// *******************************************************************************
+$columns: 12;
+$breakpoints: (
+	xs: 320px,
+	sm: 520px,
+	md: 980px,
+	lg: 1200px,
+	xl: 1320px
+);
+$gutters: (
+	xs: 20px,
+	sm: 20px,
+	md: 30px,
+	lg: 60px
+);
+$container-maxwidth: (
+	xl: em(1320px),
+	lg: em(1260px)
+);
+
+// *******************************************************************************
+// * SPACING
+// *******************************************************************************
+$spacing-multiplier: (1, 2, 3, 4);
+$spacing-properties: (
+	pt: padding-top,
+	pb: padding-bottom,
+	mt: margin-top,
+	mb: margin-bottom
+);
+
+$spacing-distance: (
+	xs: 20px,
+	sm: 30px,
+	md: 40px,
+);
+
+// $spacing-distance: 20px;
+
+// *******************************************************************************
+// * COLOURS
+// *******************************************************************************
+//after the hex, add a true to enable it in the output
+//<"grey_light": #f4f2eb true>
+//generates a class called bg-grey_light with a bg color
+$colors: (
+	"red": #ed1c24,
+	"black": #1e1e1c true,
+	"white": #ffffff true,
+	"grey-dark": #474949, // Contact form
+	"grey-text": #8e8e8e,
+	"grey-medium": #e2e2e2,
+	"grey-arrow": #7e7e7e,
+	"grey-light": #F1F1F1,
+	"brown": #c5ad97
+);
+//Colors used in templating ('.bg-link')
+$themes: (
+	"link": cl("grey_light"),
+	"theme-gold": (
+		color: white,
+		background: #ac8940
+	)
+);
+@each $color, $hex in $colors {
+	@if length($hex) > 1 and nth($hex, 2) {
+		$hex: nth($hex, 1);
+		$themes: if(variable-exists(themes), map-merge($themes, ($color:$hex)), ($color: $hex)) !global;
+	}
+}
+
+$debug-level: 1;

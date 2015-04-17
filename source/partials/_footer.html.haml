@@ -1,0 +1,56 @@
+%footer.footer.container.xs-pt-2
+  .row
+    .xs-12.sm-4.md-3.xs-mb-2
+      %h3= t('footer.more_information')
+      %ul.list-unstyled
+        %li= link_to "Cradle to Cradle", "#"
+        %li= link_to "Actiegericht werken", "#"
+        %li= link_to "Werken bij Ahrend", "#"
+        %li= link_to "Slimmer werken", "#"
+        %li= link_to "De circulaire economie", "#"
+        %li= link_to "Dutch Design", "#"
+    .xs-12.sm-4.md-3.xs-mb-2
+      %h3= t('footer.visit_us')
+      %strong.no-margin Ahrend Inspiration Centre
+      %ul.list-unstyled.xs-mb-1
+        %li Royal Ahrend
+        %li Laarderhoogtweg 25
+        %li 1101 EB Amsterdam
+        %li The Netherlands
+
+      %strong.no-margin Ahrend Head Office - Showroom
+      %ul.list-unstyled
+        %li Ahrend Furniture
+        %li Kofferen 60
+        %li 5492 BP Sint-Oedenrode
+        %li The Netherlands
+
+      %p
+        = link_to t('footer.all_locations'), "#"
+
+    .xs-12.sm-4.md-6
+      .xs-12.md-6.xs-mb-2.footer__nested
+        %h3= t('footer.stay_updated')
+        %p Schrijf je in voor de nieuwsbrief en blijf op de hoogte van Ahrend
+        = form_tag "" do
+          %p= email_field_tag "email", placeholder: t('footer.email')
+          %p= submit_tag t('footer.subscribe'), "#", class: "button"
+      .xs-12.md-6.footer__nested
+        %h3= t('footer.contact')
+        %ul.list-unstyled
+          %li
+            T
+            = link_to "+31(0)88 - 00 60 000", "tel:+310880060000"
+          %li= link_to "info@ahrend.com", "mailto:info@ahrend.com"
+        
+        %ul.list-unstyled.xs-mt-1
+          %li P.O. Box 1
+          %li 5490 AA Sint-Oedenrode
+        %ul.list-unstyled.list-horizontal.horizontal-icons.xs-mt-2
+          %li= link_to "", "https://www.facebook.com/ahrendinrichten", class: "icon-facebook"
+          %li= link_to "", "https://www.linkedin.com/company/ahrend", class: "icon-linkedin"
+          %li= link_to "", "https://twitter.com/ahrendoffice", class: "icon-twitter"
+          %li= link_to "", "https://www.youtube.com/user/AhrendOffice", class: "icon-youtube"
+          %li= link_to "", "", class: "icon-instagram"
+          %li= link_to "", "http://pinterest.com/ahrend", class: "icon-pinterest"
+          %li= link_to "", "", class: "icon-google-plus"

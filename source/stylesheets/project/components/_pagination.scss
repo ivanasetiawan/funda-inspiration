@@ -1,0 +1,57 @@
+.pagination {
+  overflow: hidden;
+  margin: 0 auto 4em;
+  position: relative;
+  &__item {
+    $size: 30px;
+    width: $size;
+    height: $size;
+    line-height: $size;
+    border: 2px solid cl("grey-medium");
+    text-align: center;
+    margin: 0 1px 5px;
+    box-sizing: border-box;
+    @include bp("sm+") {
+      $size: 40px;
+      width: $size;
+      height: $size;
+      line-height: $size;
+      margin: 0 5px;
+    }
+    a { 
+      color: cl("black");
+      display: block;
+    }
+    &.is-active { 
+      border: 2px solid cl("red"); 
+      a { color: cl("red"); }
+    }
+    &--button { 
+      border-color: cl("red");
+      background-color: cl("red");
+      width: auto;
+      padding: 0 15px;
+      a { color: cl("white"); }
+    }
+  }
+}
+
+////////
+// Part of pagination - view history 
+.view-history {
+  line-height: 1;
+  display: block;
+  @extend .icon-arrow-left;
+  &:before { 
+    margin-right: 1em;
+    vertical-align: top;
+    font-size: 0.7em; 
+  }
+  @include bp("md+") {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -0.5em;
+  }
+}
+////////

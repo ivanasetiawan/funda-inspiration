@@ -1,0 +1,13 @@
+.media {
+	&__object {
+		float: left;
+		display: block;
+		img {display: block;}
+	}
+	&__content {
+		overflow: hidden; _overflow:visible;zoom:1;
+	}
+	&__rev {
+		float: right;
+	}
+}

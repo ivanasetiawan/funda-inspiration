@@ -1,0 +1,17 @@
+.container.xs-mb-2
+  .row
+    .xs-12
+      %article.article.bg-white
+        .article__text
+          .article__inner.bottom-separator.bottom-separator--light
+            .meta Het nieuwe werken
+            %h2= link_to "Licht en werkruimte: hoe verhoog je de focus?", "article.html"
+            %p Proin faucibus arcu quis ante. Curabitur a felis in nunc fringilla tristique. Vestibulum suscipit nulla quis orci.
+            - if type == "blog"
+              = link_to "author.html", class: "author xs-mb-1" do
+                .author__avatar
+                  = image_tag "author.jpg"
+                %h4.no-margin Janneke van der Wey
+                %p.no-margin ruimtelijk ontwerper bij Ahrend
+          %p 18 maart 2015
+        %a.article__image{href: "article.html", :class => "b-lazy", :data => {"src" => "images/article.jpg", "src-sm" => "images/article.jpg", "src-md" => "images/article.jpg", "src-lg" => "images/article.jpg", "src-xl" => "images/article.jpg"}}

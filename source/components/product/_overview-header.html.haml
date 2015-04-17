@@ -1,0 +1,53 @@
+%article.container
+	.row.xs-pt-2.xs-pb-2
+		.xs-12.lg-2
+			%h1 Producten
+
+		.xs-12.lg-10
+			%ul.list-unstyled.categories.js_toggle
+				%li.categories__select.js_toggle__select
+					%span Categories
+				
+				%li= link_to "Alle", "#"
+				%li.categories__has-sub
+					%span{:class => "js_toggle__trigger"} Bureau’s
+					%ul.list-unstyled.js_toggle__target
+						%li= link_to "test 1", "#"
+						%li= link_to "test 2", "#"
+						%li= link_to "test 3", "#"
+						%li= link_to "test 4", "#"
+
+				%li.categories__has-sub
+					%span{:class => "js_toggle__trigger"} Stoelen
+					%ul.list-unstyled.js_toggle__target 
+						%li= link_to "Bureaustoelen"
+						%li= link_to "Bezoek- &amp; vergaderstoelen"
+						%li= link_to "Soft seating"
+						%li= link_to "Onderwijs stoelen"
+				%li.categories__has-sub
+					%span{:class => "js_toggle__trigger"} Opbergen
+					%ul.list-unstyled.js_toggle__target 
+						%li= link_to "test 1", "#"
+						%li= link_to "test 2", "#"
+						%li= link_to "test 3", "#"
+						%li= link_to "test 4", "#"
+
+				%li.categories__has-sub
+					%span{:class => "js_toggle__trigger"} Schermen
+					%ul.list-unstyled.js_toggle__target 
+						%li= link_to "test 1", "#"
+						%li= link_to "test 2", "#"
+						%li= link_to "test 3", "#"
+						%li= link_to "test 4", "#"
+
+				%li.categories__has-sub
+					%span{:class => "js_toggle__trigger"} Materialen
+					%ul.list-unstyled.js_toggle__target 
+						%li= link_to "test 1", "#"
+						%li= link_to "test 2", "#"
+						%li= link_to "test 3", "#"
+						%li= link_to "test 4", "#"
+						
+				%li= link_to "Partners", "#"
+				%li= link_to "Accessoires", "#"
+

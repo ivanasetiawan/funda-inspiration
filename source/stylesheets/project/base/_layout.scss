@@ -1,0 +1,63 @@
+@each $color, $hex in $colors {
+	@if length($hex) > 1 {
+		.bg-#{$color} {
+			background-color: nth($hex, 1);
+		}
+  }
+  .color-#{$color} {
+    color: nth($hex, 1);
+  }
+}
+
+body {
+	padding: 0;
+	margin: 0;
+  color: cl("black");
+  background-color: cl("white");
+  @include bp("md+") {
+    padding: 0 map-get($gutters, "xs");
+    padding-top: 0 !important;
+  }
+  @include bp("lg+") {
+    padding: 0 map-get($gutters, "md");
+  }
+}
+
+.site-wrapper {
+  background-color: cl("grey-light");
+}
+
+.bottom-separator {
+  &:after {
+    width: 110px;
+    height: 1px;
+    background-color: cl("grey-text");
+    content: "";
+    display: block;
+    margin-top: 1em;
+  }
+  &--light { 
+    &:after { background-color: cl("grey-medium"); }
+  }
+}
+
+.horizontal-icons {
+  font-size: 20px;
+  li {
+    vertical-align: middle;
+    margin: 5px 14px 5px 0px;
+    &:first-child { margin-left: 0; }
+    &:last-child  { margin-right: 0; }
+  }
+  a { color: cl("grey-text"); }
+}
+
+img {
+  @include bp("sm-") {
+    max-height: 320px;
+  }
+}
+
+.content--horizontal {
+  p { font-size: em(18px); }
+}

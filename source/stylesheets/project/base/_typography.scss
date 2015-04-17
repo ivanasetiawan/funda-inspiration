@@ -1,0 +1,89 @@
+body {
+	font-family: $font-sans-serif;
+	font-size: em($font-size-default, 16px);
+	font-weight: 300;
+	line-height: 1.75em;
+	//-webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4, h5, h6, 
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-weight: 300;
+	line-height: 1.3em;
+	margin: 0 0 .5em;
+
+	+ .subheader {
+		margin-top: -.5em;
+	}
+}
+
+h4, h5, h6, .h4, .h5, .h6 {
+	font-weight: 400;
+}
+
+.h1, h1 {
+	font-size: em(32px);
+	@include bp("sm+") { font-size: em(42px); }
+}
+.h2, h2 {
+	font-size: em(22px);
+	@include bp("sm+") { font-size: em(32px); }
+}
+.h3, h3 {
+	font-size: em(18px);
+	@include bp("sm+") { font-size: em(24px); }
+
+	////////
+	// On product detail, all h3 has color grey-text by design.
+	@at-root .content--horizontal & {
+		color: cl("grey-text");
+	}
+	////////
+
+}
+.h4, h4 {
+	font-size: em(16px);
+	@include bp("sm+") { font-size: em(20px); }
+}
+
+
+ul {
+	padding-left: 1em;
+	margin: 0;
+	li { margin-bottom: 0.8em; }
+}
+
+a {
+	color: cl("red");
+	text-decoration: none;
+	transition: color 0.2s ease-in-out;
+	&:hover {
+		color: darken(cl("red"), 10%);
+	}
+}
+
+blockquote {
+	margin: 0;
+	line-height: 1.33em;
+	@include font-scaling(1.8em, 2.4em); 
+	font-size: 1.3em;
+}
+
+cite {
+	display: inline-block;
+	font-style: normal;
+	border-top: 4px solid cl("white");
+	padding-top: 20px;
+	margin-top: 20px;
+}
+
+strong {
+	font-weight: 500;
+}
+
+.subheader { font-weight: 400; }
+
+.meta {
+	font-size: 14px;
+	color: cl("grey-text");
+	text-transform: lowercase;
+}

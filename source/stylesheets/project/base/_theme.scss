@@ -1,0 +1,25 @@
+$theming: (
+  golden: (
+    bg:  orange, 
+    color: blue
+  ),
+
+  greenlight: (
+    bg:  green, 
+    color: red
+  ),
+
+);
+
+@each $type, $background, $color in $theming {
+	.theme {
+		&--#{$type} {
+			color: map-get-deep($theming, "#{$type}", "color");
+		}
+
+		&__box {
+			background: map-get-deep($theming, "#{$type}", "bg");
+			color: map-get-deep($theming, "#{$type}", "color");
+		}
+	}
+}

@@ -9,6 +9,13 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+activate :i18n
+activate :autoprefixer do |config|
+  config.browsers = ['last 2 versions', 'Explorer >= 9']
+end
+
+set :haml, { :ugly => true, :format => :html5 }
+
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
 
@@ -35,8 +42,8 @@ page '/*.txt', layout: false
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 end

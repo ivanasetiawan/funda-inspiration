@@ -1,0 +1,19 @@
+- if full
+  %article.container
+    .row
+      .xs-12.quote{ class: full ? "quote--full" : "quote--half" }
+
+        .quote__image.b-lazy{ data: { "src" => image_path(quote.image), "src-sm" => image_path(quote.image), "src-md" => image_path(quote.image), "src-lg" => image_path(quote.image), "src-xl" => image_path(quote.image) } }
+
+          .quote__text
+            %blockquote= quote.text
+            %cite= quote.author
+
+- else
+  %article.container
+    .row
+      .xs-12.quote{ class: full ? "quote--full" : "quote--half" }
+        .quote__image.b-lazy{ data: { "src" => image_path(quote.image), "src-sm" => image_path(quote.image), "src-md" => image_path(quote.image), "src-lg" => image_path(quote.image), "src-xl" => image_path(quote.image) } }
+        .quote__text
+          %blockquote= quote.text
+          %cite= quote.author
