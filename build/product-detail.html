@@ -1,377 +1,89 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
-    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport'>
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
-    <title>Product</title>
-    <link href='/images/favicons/apple-touch-icon-57x57.png' rel='apple-touch-icon' sizes='57x57'>
-    <link href='/images/favicons/apple-touch-icon-60x60.png' rel='apple-touch-icon' sizes='60x60'>
-    <link href='/images/favicons/apple-touch-icon-72x72.png' rel='apple-touch-icon' sizes='72x72'>
-    <link href='/images/favicons/apple-touch-icon-76x76.png' rel='apple-touch-icon' sizes='76x76'>
-    <link href='/images/favicons/apple-touch-icon-114x114.png' rel='apple-touch-icon' sizes='114x114'>
-    <link href='/images/favicons/apple-touch-icon-120x120.png' rel='apple-touch-icon' sizes='120x120'>
-    <link href='/images/favicons/apple-touch-icon-144x144.png' rel='apple-touch-icon' sizes='144x144'>
-    <link href='/images/favicons/apple-touch-icon-152x152.png' rel='apple-touch-icon' sizes='152x152'>
-    <link href='/images/favicons/apple-touch-icon-180x180.png' rel='apple-touch-icon' sizes='180x180'>
-    <link href='/images/favicons/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'>
-    <link href='/images/favicons/favicon-194x194.png' rel='icon' sizes='194x194' type='image/png'>
-    <link href='/images/favicons/favicon-96x96.png' rel='icon' sizes='96x96' type='image/png'>
-    <link href='/images/favicons/android-chrome-192x192.png' rel='icon' sizes='192x192' type='image/png'>
-    <link href='/images/favicons/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
-    <link href='/images/favicons/manifest.json' rel='manifest'>
-    <link href='/images/favicons/favicon.ico' rel='shortcut icon'>
-    <meta content='#da532c' name='msapplication-TileColor'>
-    <meta content='/images/favicons/mstile-144x144.png' name='msapplication-TileImage'>
-    <meta content='/images/favicons/browserconfig.xml' name='msapplication-config'>
-    <meta content='#ffffff' name='theme-color'>
-    <link href="/stylesheets/application.css" rel="stylesheet" type="text/css" />
-    <!-- = stylesheet_link_tag :application, :media => "none", :onload => "if(media!='all')media='all'" -->
-  </head>
-  <body>
-    <header class='menu js_menu'>
-      <div class='container'>
-        <a class="ahrend icon-ahrend-logo" href="/"></a>
-        <div class='menu__hamburger icon-menu'>
-          <span>Menu</span>
-        </div>
-        <div class='menu__close icon-close'></div>
-        <nav class='menu__nav'>
-          <ul>
-            <li><a href="#">Producten</a></li>
-            <li><a href="#">Projecten</a></li>
-            <li>
-              <a href="#">Concepten</a>
-              <ul class='menu__sub'>
-                <li><a href="#">Office Lifestyle </a></li>
-                <li><a href="#">Duurzaamheid</a></li>
-                <li><a href="#">Design</a></li>
-                <li><a href="#">Akoestiek</a></li>
-                <li><a href="#">Ergonomie</a></li>
-                <li><a href="#">Onderwijs</a></li>
-                <li><a href="#">Zorg</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">Diensten</a>
-              <ul class='menu__sub'>
-                <li><a href="#">Ahrend Leasing </a></li>
-                <li><a href="#">Ahrend Hergebruik</a></li>
-                <li><a href="#">Inrichten</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">Over ons</a>
-              <ul class='menu__sub'>
-                <li><a href="#">MVO</a></li>
-                <li><a href="#">Organisatie</a></li>
-                <li><a href="#">Heritage</a></li>
-                <li><a href="#">Werken bij Ahrend</a></li>
-                <li><a href="#">Actueel/Journal</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Downloads</a></li>
-          </ul>
-        </nav>
-        <div class='menu__languange-switch js_toggle'>
-          <ul>
-            <li class='js_toggle__select current'>
-              <span>Nederlands</span>
-            </li>
-            <li><a href="#">Nederlands</a></li>
-            <li><a href="#">English</a></li>
-            <li><a href="#">Deutsch</a></li>
-          </ul>
-        </div>
-        <div class='menu__search'>
-          <a class='icon-search'></a>
-          <div class='menu__close icon-close'></div>
-          <form class='menu__input'>
-            <a class='icon-search'></a>
-            <input placeholder='Zoeken' type='search'>
-          </form>
-        </div>
-      </div>
-    </header>
-    <div class='product-detail site-wrapper'>
-      <article class='hero--split'>
-        <div class='hero__split-text'>
-          <h1>Ahrend Balance</h1>
-          <h2 class='h3 bottom-separator'>Vind de juiste balans tussen comfort, concentratie en collegialiteit.</h2>
-          <ul class='list-unstyled list-horizontal horizontal-icons xs-mb-2'>
-            <li><img src="/images/product_logo.png" /></li>
-            <li><img src="/images/product_logo.png" /></li>
-            <li><img src="/images/product_logo.png" /></li>
-          </ul>
-        </div>
-        <div class='hero__split-image'><img class="fullwidth-image" src="/images/balance.png" /></div>
-      </article>
-      <article class='xs-mb-2'>
-        <div class='b-lazy hero hero--tall' data-src-lg='images/new_york.jpg' data-src-md='images/new_york.jpg' data-src-sm='images/new_york.jpg' data-src-xl='images/new_york.jpg' data-src='images/new_york.jpg'></div>
-      </article>
-      <article class='container content--horizontal'>
-        <div class='row'>
-          <div class='xs-12 md-2'>
-            <h3>Informatie</h3>
-          </div>
-          <div class='xs-12 md-10 xs-pb-2'>
-            <div class='row'>
-              <div class='xs-12 lg-8'>
-                <p class='no-margin-top'>De Ahrend 350 conferentie- en bezoekerstoelen zijn met zorg ontworpen. De stoel combineert zitcomfort met een stijlvolle, verfijnde en markante vormgeving en is in zowel kantoor als vergaderruimte toe te passen. De bezoekersstoelen hebben een eigen uitnodigende vorm, maar met het zitgemak dat hoort bij Ahrend 350. De conferentiefauteuils hebben een vaste zithoogte en een standgeheugen, waardoor ze altijd de juiste stand aan de vergadertafel kiezen.</p>
-                <ul class='arrow-list xs-mb-2'>
-                  <li>exclusief, modern design met gebruik van hoogwaardige materialen</li>
-                  <li>conferentiestoelen met standgeheugen</li>
-                  <li>complete range met management- en bureaustoelen</li>
-                </ul>
-              </div>
-              <div class='xs-12 lg-4'>
-                <div class='info-block'>
-                  <div class='xs-pt-1 xs-pb-1 bg-black info-block__heading'>
-                    <h3>Meer informatie?</h3>
-                    <p class='no-margin-bottom'>Bel 0123 456 789 of bezoek één van onze showrooms</p>
-                  </div>
-                  <div class='xs-pt-1 xs-pb-1 bg-white info-block__socials'>
-                    <h4>Delen</h4>
-                    <ul class='list-unstyled list-horizontal horizontal-icons'>
-                      <li><a class="icon-facebook" href="https://www.facebook.com/ahrendinrichten"></a></li>
-                      <li><a class="icon-linkedin" href="https://www.linkedin.com/company/ahrend"></a></li>
-                      <li><a class="icon-twitter" href="https://twitter.com/ahrendoffice"></a></li>
-                      <li><a class="icon-youtube" href="https://www.youtube.com/user/AhrendOffice"></a></li>
-                      <li><a class="icon-instagram" href=""></a></li>
-                      <li><a class="icon-pinterest" href="http://pinterest.com/ahrend"></a></li>
-                      <li><a class="icon-google-plus" href=""></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-      <div class='container content--horizontal'>
-        <div class='row'>
-          <div class='xs-12 blocks'>
-            <div class='sm sm__is-text'>
-              <div>
-                <h2 class='h3'>Impressie</h2>
-              </div>
-            </div>
-            <div class='b-lazy sm' data-src-lg='images/product-square.jpg' data-src-md='images/product-square.jpg' data-src-sm='images/product-square.jpg' data-src-xl='images/product-square.jpg' data-src='images/product-square.jpg'></div>
-            <div class='b-lazy long' data-src-lg='images/product-rect.jpg' data-src-md='images/product-rect.jpg' data-src-sm='images/product-rect.jpg' data-src-xl='images/product-rect.jpg' data-src='images/product-rect.jpg'></div>
-          </div>
-        </div>
-      </div>
-      <div class='container'>
-        <div class='row'>
-          <div class='xs-12 blocks'>
-            <div class='b-lazy lg' data-src-lg='images/silver_chair.jpg' data-src-md='images/silver_chair.jpg' data-src-sm='images/silver_chair.jpg' data-src-xl='images/silver_chair.jpg' data-src='images/silver_chair.jpg'></div>
-            <div class='b-lazy long popup-video' data-src-lg='images/block-long-lg.jpg' data-src-md='images/block-long-md.jpg' data-src-sm='images/block-long-sm.jpg' data-src-xl='images/block-long-lg.jpg' data-src='images/block-long-sm.jpg' href='http://www.youtube.com/watch?v=-jmBO6Smits'></div>
-            <div class='b-lazy sm' data-src-lg='images/blue_desk.jpg' data-src-md='images/blue_desk.jpg' data-src-sm='images/blue_desk.jpg' data-src-xl='images/blue_desk.jpg' data-src='images/blue_desk.jpg'></div>
-            <div class='b-lazy sm' data-src-lg='images/green_chair.jpg' data-src-md='images/green_chair.jpg' data-src-sm='images/green_chair.jpg' data-src-xl='images/green_chair.jpg' data-src='images/green_chair.jpg'></div>
-          </div>
-        </div>
-      </div>
-      <article class='container content--horizontal'>
-        <div class='row'>
-          <div class='xs-12 lg-2 xs-pt-2 xs-pb-2'>
-            <h2 class='h3'>De designer</h2>
-          </div>
-          <div class='xs-12 lg-10'>
-            <div class='xs-pt-2 xs-pb-2 bg-white clearfix'>
-              <div class='xs-12 md-4 center-text'>
-                <img src="/images/designer.jpg" />
-              </div>
-              <div class='xs-12 md-8'>
-                <h2 class='h1'>Wijtse Rodenburg</h2>
-                <p>Wijtse Rodenburg werd in 1949 geboren. Hij studeerde aan de Gerrit Rietveld Akademie in Amsterdam, richting industrieel ontwerp. In 1973 trad hij dienst bij Ahrend als industrieel ontwerper in de design groep onder leiding van Friso Kramer. Vanaf 1994 is hij industrieel ontwerper bij Ahrend Produktiebedrijf Sint-Oedenrode. Naast ontwerper bij Ahrend is hij sinds 1984 parttime docent bij de Design Academy Eindhoven, afstudeerrichting Man & Activity.</p>
-                <p><a href="#">Meer over Wijtse Rodenburg</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-      <article class='container content--horizontal xs-mt-2'>
-        <div class='row'>
-          <div class='xs-12 md-2'>
-            <h2 class='h3'>Specificaties</h2>
-          </div>
-          <div class='xs-12 sm-4 md-3 xs-mb-2'>
-            <h4>Basis</h4>
-            <ul class='arrow-list'>
-              <li>Bezoekersstoel met sledeframe</li>
-              <li>Vergaderstoel met kruisvoet op glijders</li>
-            </ul>
-          </div>
-          <div class='xs-12 sm-4 md-3 xs-mb-2'>
-            <h4>Technische details</h4>
-            <ul class='arrow-list'>
-              <li>Bezoekersstoel met sledeframe</li>
-              <li>Vergaderstoel met kruisvoet op glijders</li>
-            </ul>
-          </div>
-          <div class='xs-12 sm-4 md-3 xs-mb-2'>
-            <h4>Opties</h4>
-            <ul class='arrow-list'>
-              <li>vaste armleggers, eventueel in leer</li>
-              <li>hoge rug</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-      <article class='container content--horizontal xs-mt-1'>
-        <div class='row'>
-          <div class='xs-12 md-2'>
-            <h2 class='h3'>Downloads</h2>
-          </div>
-          <div class='xs-12 md-3 xs-mb-2'>
-            <h4>Brochures en factsheets</h4>
-            <ul class='list-unstyled downloads-list'>
-              <li>
-                <a href="#"><span class='filetype'>PDF</span>
-                factsheet Ahrend 350
-                </a>
-              </li>
-              <li>
-                <a href="#"><span class='filetype'>PDF</span>
-                Ahrend 350 brochure
-                </a>
-              </li>
-              <li>
-                <a href="#"><span class='filetype'>PDF</span>
-                Construction instruction
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class='xs-12 md-3 xs-mb-2'>
-            <h4>Handleidingen</h4>
-            <ul class='list-unstyled downloads-list'>
-              <li>
-                <a href="#"><span class='filetype'>PDF</span>
-                Ahrend 350 manual
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class='xs-12 md-3 xs-mb-2'>
-            <h4>Certificaten</h4>
-            <ul class='list-unstyled downloads-list'>
-              <li>
-                <a href="#"><span class='filetype'>PDF</span>
-                Reddot Design certificate
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </article>
-      <article class='container content--horizontal xs-mt-1'>
-        <div class='row'>
-          <div class='xs-12 md-2'>
-            <h3>Gerelateerd</h3>
-          </div>
-          <div class='xs-12 md-10 xs-mb-2'>
-            <div class='blocks'>
-              <a class='b-lazy longest popup-video' data-src-lg='images/block-long-lg.jpg' data-src-md='images/block-long-md.jpg' data-src-sm='images/block-long-sm.jpg' data-src-xl='images/block-long-lg.jpg' data-src='images/block-long-sm.jpg' href='http://www.youtube.com/watch?v=-jmBO6Smits'>
-                <div class='blocks__label blocks__label--white'>Research</div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </article>
-      <article class='container content--horizontal xs-pb-4 more-info'>
-        <div class='row'>
-          <div class='xs-12 md-2'>
-            <h2 class='h3'>Meer informatie</h2>
-          </div>
-          <div class='xs-12 md-10'>
-            <div class='bg-white xs-pt-2 xs-pb-2 clearfix more-info__inner b-lazy' data-src-lg='images/manager.jpg' data-src-md='images/manager.jpg' data-src-sm='images/manager.jpg' data-src-xl='images/manager.jpg' data-src='images/manager.jpg'>
-              <div class='xs-12 sm-3 more-info__photo'>&nbsp;</div>
-              <div class='xs-12 sm-6 md-4'>
-                <h3>Peter van Ahrend</h3>
-                <ul class='list-unstyled'>
-                  <li>Projectmanager bij Ahrend</li>
-                  <li>Bel 1234 56 789</li>
-                  <li><a href="mailto:peter@ahrend.nl">peter@ahrend.nl</a></li>
-                </ul>
-              </div>
-              <div class='xs-12 sm-6 md-5'>
-                <a class="button button--big" href="">Neem contact met ons op</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
-    <footer class='footer container xs-pt-2'>
-      <div class='row'>
-        <div class='xs-12 sm-4 md-3 xs-mb-2'>
-          <h3>Meer informatie</h3>
-          <ul class='list-unstyled'>
-            <li><a href="#">Cradle to Cradle</a></li>
-            <li><a href="#">Actiegericht werken</a></li>
-            <li><a href="#">Werken bij Ahrend</a></li>
-            <li><a href="#">Slimmer werken</a></li>
-            <li><a href="#">De circulaire economie</a></li>
-            <li><a href="#">Dutch Design</a></li>
-          </ul>
-        </div>
-        <div class='xs-12 sm-4 md-3 xs-mb-2'>
-          <h3>Bezoek ons</h3>
-          <strong class='no-margin'>Ahrend Inspiration Centre</strong>
-          <ul class='list-unstyled xs-mb-1'>
-            <li>Royal Ahrend</li>
-            <li>Laarderhoogtweg 25</li>
-            <li>1101 EB Amsterdam</li>
-            <li>The Netherlands</li>
-          </ul>
-          <strong class='no-margin'>Ahrend Head Office - Showroom</strong>
-          <ul class='list-unstyled'>
-            <li>Ahrend Furniture</li>
-            <li>Kofferen 60</li>
-            <li>5492 BP Sint-Oedenrode</li>
-            <li>The Netherlands</li>
-          </ul>
-          <p>
-            <a href="#">Bekijk alle locaties</a>
-          </p>
-        </div>
-        <div class='xs-12 sm-4 md-6'>
-          <div class='xs-12 md-6 xs-mb-2 footer__nested'>
-            <h3>Blijf op de hoogte</h3>
-            <p>Schrijf je in voor de nieuwsbrief en blijf op de hoogte van Ahrend</p>
-            <form action="" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" /><p><input type="email" name="email" placeholder="E-mail adres" /></p>
-            <p><input type="submit" value="Aanmelden" class="button" /></p>
-            </form>
-          </div>
-          <div class='xs-12 md-6 footer__nested'>
-            <h3>Contact</h3>
-            <ul class='list-unstyled'>
-              <li>
-                T
-                <a href="tel:+310880060000">+31(0)88 - 00 60 000</a>
-              </li>
-              <li><a href="mailto:info@ahrend.com">info@ahrend.com</a></li>
-            </ul>
-            <ul class='list-unstyled xs-mt-1'>
-              <li>P.O. Box 1</li>
-              <li>5490 AA Sint-Oedenrode</li>
-            </ul>
-            <ul class='list-unstyled list-horizontal horizontal-icons xs-mt-2'>
-              <li><a class="icon-facebook" href="https://www.facebook.com/ahrendinrichten"></a></li>
-              <li><a class="icon-linkedin" href="https://www.linkedin.com/company/ahrend"></a></li>
-              <li><a class="icon-twitter" href="https://twitter.com/ahrendoffice"></a></li>
-              <li><a class="icon-youtube" href="https://www.youtube.com/user/AhrendOffice"></a></li>
-              <li><a class="icon-instagram" href=""></a></li>
-              <li><a class="icon-pinterest" href="http://pinterest.com/ahrend"></a></li>
-              <li><a class="icon-google-plus" href=""></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <script src="/javascripts/all.js" type="text/javascript"></script>
-  </body>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+<title>Product</title>
+<link href='/images/favicons/apple-touch-icon-57x57.png' rel='apple-touch-icon' sizes='57x57'>
+<link href='/images/favicons/apple-touch-icon-60x60.png' rel='apple-touch-icon' sizes='60x60'>
+<link href='/images/favicons/apple-touch-icon-72x72.png' rel='apple-touch-icon' sizes='72x72'>
+<link href='/images/favicons/apple-touch-icon-76x76.png' rel='apple-touch-icon' sizes='76x76'>
+<link href='/images/favicons/apple-touch-icon-114x114.png' rel='apple-touch-icon' sizes='114x114'>
+<link href='/images/favicons/apple-touch-icon-120x120.png' rel='apple-touch-icon' sizes='120x120'>
+<link href='/images/favicons/apple-touch-icon-144x144.png' rel='apple-touch-icon' sizes='144x144'>
+<link href='/images/favicons/apple-touch-icon-152x152.png' rel='apple-touch-icon' sizes='152x152'>
+<link href='/images/favicons/apple-touch-icon-180x180.png' rel='apple-touch-icon' sizes='180x180'>
+<link href='/images/favicons/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'>
+<link href='/images/favicons/favicon-194x194.png' rel='icon' sizes='194x194' type='image/png'>
+<link href='/images/favicons/favicon-96x96.png' rel='icon' sizes='96x96' type='image/png'>
+<link href='/images/favicons/android-chrome-192x192.png' rel='icon' sizes='192x192' type='image/png'>
+<link href='/images/favicons/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
+<link href='/images/favicons/manifest.json' rel='manifest'>
+<link href='/images/favicons/favicon.ico' rel='shortcut icon'>
+<meta content='#da532c' name='msapplication-TileColor'>
+<meta content='/images/favicons/mstile-144x144.png' name='msapplication-TileImage'>
+<meta content='/images/favicons/browserconfig.xml' name='msapplication-config'>
+<meta content='#ffffff' name='theme-color'>
+
+<link href="/stylesheets/application.css" rel="stylesheet" type="text/css" />
+<!-- = stylesheet_link_tag :application, :media => "none", :onload => "if(media!='all')media='all'" -->
+</head>
+<body>
+<header class='menu js_menu'>
+<div class='container'>
+<a class="logo" href="/"></a>
+<div class='menu__hamburger icon-menu'>
+<span>Menu</span>
+</div>
+<div class='menu__close icon-close'></div>
+<div class='menu__users'>
+<ul>
+<li><a href="#">Account aanmaken</a></li>
+<li><a href="#">Inloggen</a></li>
+</ul>
+<div class='menu__language-switch js_toggle'>
+<ul>
+<li class='js_toggle__select current'>
+<span>Nederlands</span>
+</li>
+<li><a href="#">Nederlands</a></li>
+<li><a href="#">English</a></li>
+</ul>
+</div>
+</div>
+<!-- .menu__search -->
+<!-- %a.icon-search -->
+<!-- .menu__close.icon-close -->
+<!-- %form.menu__input -->
+<!-- %a.icon-search -->
+<!-- %input{:type => "search", :placeholder => "Zoeken"} -->
+</div>
+<nav class='menu__nav'>
+<div class='container'>
+<ul class='menu__main'>
+<li class='has-sub'>
+<a href="#">Woningaanbod</a>
+<ul class='menu__sub'>
+<li><a href="#">Koopwoningen</a></li>
+<li><a href="#">Huurwoningen</a></li>
+<li><a href="#">Nieuwbouw</a></li>
+<li><a href="#">Recreatie</a></li>
+<li><a href="#">Europees aanbod</a></li>
+</ul>
+</li>
+<li><a href="#">Huis plaatsen</a></li>
+<li><a href="#">NVM makelaars</a></li>
+<li><a href="#">Mijn funda</a></li>
+</ul>
+</div>
+</nav>
+</header>
+
+<!-- .site-wrapper{:class => page_classes} -->
+<!-- = yield -->
+<!-- = partial "partials/footer" -->
+<script src="/javascripts/all.js" type="text/javascript"></script>
+</body>
 </html>

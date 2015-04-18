@@ -1,281 +1,89 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
-    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport'>
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
-    <title>Blog detail</title>
-    <link href='/images/favicons/apple-touch-icon-57x57.png' rel='apple-touch-icon' sizes='57x57'>
-    <link href='/images/favicons/apple-touch-icon-60x60.png' rel='apple-touch-icon' sizes='60x60'>
-    <link href='/images/favicons/apple-touch-icon-72x72.png' rel='apple-touch-icon' sizes='72x72'>
-    <link href='/images/favicons/apple-touch-icon-76x76.png' rel='apple-touch-icon' sizes='76x76'>
-    <link href='/images/favicons/apple-touch-icon-114x114.png' rel='apple-touch-icon' sizes='114x114'>
-    <link href='/images/favicons/apple-touch-icon-120x120.png' rel='apple-touch-icon' sizes='120x120'>
-    <link href='/images/favicons/apple-touch-icon-144x144.png' rel='apple-touch-icon' sizes='144x144'>
-    <link href='/images/favicons/apple-touch-icon-152x152.png' rel='apple-touch-icon' sizes='152x152'>
-    <link href='/images/favicons/apple-touch-icon-180x180.png' rel='apple-touch-icon' sizes='180x180'>
-    <link href='/images/favicons/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'>
-    <link href='/images/favicons/favicon-194x194.png' rel='icon' sizes='194x194' type='image/png'>
-    <link href='/images/favicons/favicon-96x96.png' rel='icon' sizes='96x96' type='image/png'>
-    <link href='/images/favicons/android-chrome-192x192.png' rel='icon' sizes='192x192' type='image/png'>
-    <link href='/images/favicons/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
-    <link href='/images/favicons/manifest.json' rel='manifest'>
-    <link href='/images/favicons/favicon.ico' rel='shortcut icon'>
-    <meta content='#da532c' name='msapplication-TileColor'>
-    <meta content='/images/favicons/mstile-144x144.png' name='msapplication-TileImage'>
-    <meta content='/images/favicons/browserconfig.xml' name='msapplication-config'>
-    <meta content='#ffffff' name='theme-color'>
-    <link href="/stylesheets/application.css" rel="stylesheet" type="text/css" />
-    <!-- = stylesheet_link_tag :application, :media => "none", :onload => "if(media!='all')media='all'" -->
-  </head>
-  <body>
-    <header class='menu js_menu'>
-      <div class='container'>
-        <a class="ahrend icon-ahrend-logo" href="/"></a>
-        <div class='menu__hamburger icon-menu'>
-          <span>Menu</span>
-        </div>
-        <div class='menu__close icon-close'></div>
-        <nav class='menu__nav'>
-          <ul>
-            <li><a href="#">Producten</a></li>
-            <li><a href="#">Projecten</a></li>
-            <li>
-              <a href="#">Concepten</a>
-              <ul class='menu__sub'>
-                <li><a href="#">Office Lifestyle </a></li>
-                <li><a href="#">Duurzaamheid</a></li>
-                <li><a href="#">Design</a></li>
-                <li><a href="#">Akoestiek</a></li>
-                <li><a href="#">Ergonomie</a></li>
-                <li><a href="#">Onderwijs</a></li>
-                <li><a href="#">Zorg</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">Diensten</a>
-              <ul class='menu__sub'>
-                <li><a href="#">Ahrend Leasing </a></li>
-                <li><a href="#">Ahrend Hergebruik</a></li>
-                <li><a href="#">Inrichten</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">Over ons</a>
-              <ul class='menu__sub'>
-                <li><a href="#">MVO</a></li>
-                <li><a href="#">Organisatie</a></li>
-                <li><a href="#">Heritage</a></li>
-                <li><a href="#">Werken bij Ahrend</a></li>
-                <li><a href="#">Actueel/Journal</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Downloads</a></li>
-          </ul>
-        </nav>
-        <div class='menu__languange-switch js_toggle'>
-          <ul>
-            <li class='js_toggle__select current'>
-              <span>Nederlands</span>
-            </li>
-            <li><a href="#">Nederlands</a></li>
-            <li><a href="#">English</a></li>
-            <li><a href="#">Deutsch</a></li>
-          </ul>
-        </div>
-        <div class='menu__search'>
-          <a class='icon-search'></a>
-          <div class='menu__close icon-close'></div>
-          <form class='menu__input'>
-            <a class='icon-search'></a>
-            <input placeholder='Zoeken' type='search'>
-          </form>
-        </div>
-      </div>
-    </header>
-    <div class='blog-detail site-wrapper'>
-      <div class='container xs-mb-2'>
-        <div class='row'>
-          <article class='content-focused'>
-            <header class='xs-12 lg-3 xs-pt-2 xs-pb-2'>
-              <span class='tag'>design</span>
-              <h2>Dit is het meest duurzame gebouw ter wereld</h2>
-              <p>Kantoorgebouw The Edge heeft het BREEAM ontwerpcertificaat ‘Outstanding’ gekregen en is daarmee het meest duurzame kantoorgebouw ter wereld.</p>
-              <a class="author xs-mb-1" href="author.html"><div class='author__avatar'>
-                <img src="/images/author.jpg" />
-              </div>
-              <h4 class='no-margin'>Janneke van der Wey</h4>
-              <p class='no-margin'>ruimtelijk ontwerper bij Ahrend</p>
-              </a>
-              <time>19 januari 2015</time>
-            </header>
-            <div class='content-focused__content xs-12 lg-9'>
-              <img class='b-lazy' data-src-lg='images/blog-header.jpg' data-src-md='images/blog-header.jpg' data-src-sm='images/blog-header.jpg' data-src-xl='images/blog-header.jpg' data-src='images/blog-header.jpg' src='images/blog-header.jpg'>
-              <div class='content-focused__share'>
-                <p>Deel dit bericht</p>
-                <ul class='list-unstyled list-horizontal horizontal-icons'>
-                  <li><a class="icon-facebook" href="https://www.facebook.com/ahrendinrichten"></a></li>
-                  <li><a class="icon-linkedin" href="https://www.linkedin.com/company/ahrend"></a></li>
-                  <li><a class="icon-twitter" href="https://twitter.com/ahrendoffice"></a></li>
-                  <li><a class="icon-pinterest" href="http://pinterest.com/ahrend"></a></li>
-                </ul>
-              </div>
-              <p>Volgens Building Research Establishment (BRE), de wereldwijde beoordelaar van duurzame gebouwen, is dit de hoogste score die ooit is afgegeven voor nieuwe gebouwen. Ahrend heeft The Edge, gevestigd op de Amsterdamse ZuidAs, ingericht op de thema’s duurzaamheid, Activiteit Gerelateerd Werken en ergonomie.</p>
-              <figure>
-                <div>
-                  <img class='b-lazy' data-src-lg='images/blog-fig1.jpg' data-src-md='images/blog-fig1.jpg' data-src-sm='images/blog-fig1.jpg' data-src-xl='images/blog-fig1.jpg' data-src='images/blog-fig1.jpg' src='images/blog-fig1.jpg'>
-                </div>
-                <figcaption>Ahrend heeft met de inrichting een gezonde werkomgeving gecreëerd die projectmatig en collaboratief werken faciliteert en stimuleert.</figcaption>
-              </figure>
-              <p>Ahrend was al in een vroegtijdig stadium als partner betrokken bij dit prestigieuze project. Bij het uitwerken heeft Ahrend vernieuwende trends en toepassingen op het gebied van Activiteit Gerelateerd Werken en ergonomie meegenomen. Een voorbeeld hiervan is de integratie van Ahrend Puk: een geïntegreerde werkplekoplossing voor het draadloos opladen van smartphones. Ahrend heeft met de inrichting een gezonde werkomgeving gecreëerd die projectmatig en collaboratief werken faciliteert en stimuleert. Voor Deloitte, de hoofdhuurder, en AKD notaris- en advocatenkantoor was dit een van de speerpunten. </p>
-              <blockquote>
-                <p>
-                  Wij zijn trots dat wij met onze expertise hebben bijgedragen aan de realisatie van het meest
-                  <em>duurzame</em>
-                  kantoorgebouw in de wereld
-                </p>
-                <footer>
-                  <cite>Eugène Sterken, CEO at Ahrend</cite>
-                </footer>
-              </blockquote>
-              <p>Volgens Building Research Establishment (BRE), de wereldwijde beoordelaar van duurzame gebouwen, is dit de hoogste score die ooit is afgegeven voor nieuwe gebouwen. Ahrend heeft The Edge, gevestigd op de Amsterdamse ZuidAs, ingericht op de thema’s duurzaamheid, Activiteit Gerelateerd Werken en ergonomie.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-      <article class='container content--horizontal xs-mt-1'>
-        <div class='row'>
-          <div class='xs-12 md-2'>
-            <h3>Gerelateerd</h3>
-          </div>
-          <div class='xs-12 md-10'>
-            <div class='blocks'>
-              <a class='b-lazy md' data-src-lg='images/related/durability.jpg' data-src-md='images/elated/durability.jpg' data-src-sm='images/related/durability.jpg' data-src-xl='images/related/durability.jpg' data-src='images/related/durability.jpg' href='#'>
-                <div class='blocks__label blocks__label--white'>Duurzaamheid</div>
-              </a>
-              <a class='b-lazy md' data-src-lg='images/related/ergonomics.jpg' data-src-md='images/related/ergonomics.jpg' data-src-sm='images/related/ergonomics.jpg' data-src-xl='images/related/ergonomics.jpg' data-src='images/related/ergonomics.jpg' href='#'>
-                <div class='blocks__label blocks__label--black'>Ergonomie</div>
-              </a>
-              <a class='b-lazy md' data-src-lg='images/related/ergonomics.jpg' data-src-md='images/related/ergonomics.jpg' data-src-sm='images/related/ergonomics.jpg' data-src-xl='images/related/ergonomics.jpg' data-src='images/related/ergonomics.jpg' href='#'>
-                <div class='blocks__label blocks__label--black'>Ergonomie</div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </article>
-      <article class='xs-mt-2 articles'>
-        <div class='container'>
-          <div class='row xs-mb-1'>
-            <h2 class='h3 xs-12'>Uit ons journal</h2>
-          </div>
-          <div class='row'>
-            <div class='xs-12'>
-              <ul class='articles__list list-unstyled xs-mb-2'>
-                <li class='articles__item xs-mb-1'>
-                  <a class="articles__inner" href="#"><img src="/images/journal/meeting.jpg" />
-                  <div class='articles__text'>
-                    <figcaption>
-                      <span class='meta'>Het nieuwe werken</span>
-                      <h3>Licht en werkruimte: hoe verhoog je de focus om tot resultaat te komen</h3>
-                    </figcaption>
-                  </div>
-                  </a>
-                </li>
-                <li class='articles__item xs-mb-1'>
-                  <a class="articles__inner" href="#"><img src="/images/journal/building.jpg" />
-                  <div class='articles__text'>
-                    <figcaption>
-                      <span class='meta'>Design</span>
-                      <h3>Dit is het meest duurzame gebouw ter wereld</h3>
-                    </figcaption>
-                  </div>
-                  </a>
-                </li>
-                <li class='articles__item xs-mb-1'>
-                  <a class="articles__inner" href="#"><img src="/images/journal/hipsters.jpg" />
-                  <div class='articles__text'>
-                    <figcaption>
-                      <span class='meta'>Interview</span>
-                      <h3>Anton Mars: een omgeving moet altijd kloppen</h3>
-                    </figcaption>
-                  </div>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
-    <footer class='footer container xs-pt-2'>
-      <div class='row'>
-        <div class='xs-12 sm-4 md-3 xs-mb-2'>
-          <h3>Meer informatie</h3>
-          <ul class='list-unstyled'>
-            <li><a href="#">Cradle to Cradle</a></li>
-            <li><a href="#">Actiegericht werken</a></li>
-            <li><a href="#">Werken bij Ahrend</a></li>
-            <li><a href="#">Slimmer werken</a></li>
-            <li><a href="#">De circulaire economie</a></li>
-            <li><a href="#">Dutch Design</a></li>
-          </ul>
-        </div>
-        <div class='xs-12 sm-4 md-3 xs-mb-2'>
-          <h3>Bezoek ons</h3>
-          <strong class='no-margin'>Ahrend Inspiration Centre</strong>
-          <ul class='list-unstyled xs-mb-1'>
-            <li>Royal Ahrend</li>
-            <li>Laarderhoogtweg 25</li>
-            <li>1101 EB Amsterdam</li>
-            <li>The Netherlands</li>
-          </ul>
-          <strong class='no-margin'>Ahrend Head Office - Showroom</strong>
-          <ul class='list-unstyled'>
-            <li>Ahrend Furniture</li>
-            <li>Kofferen 60</li>
-            <li>5492 BP Sint-Oedenrode</li>
-            <li>The Netherlands</li>
-          </ul>
-          <p>
-            <a href="#">Bekijk alle locaties</a>
-          </p>
-        </div>
-        <div class='xs-12 sm-4 md-6'>
-          <div class='xs-12 md-6 xs-mb-2 footer__nested'>
-            <h3>Blijf op de hoogte</h3>
-            <p>Schrijf je in voor de nieuwsbrief en blijf op de hoogte van Ahrend</p>
-            <form action="" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" /><p><input type="email" name="email" placeholder="E-mail adres" /></p>
-            <p><input type="submit" value="Aanmelden" class="button" /></p>
-            </form>
-          </div>
-          <div class='xs-12 md-6 footer__nested'>
-            <h3>Contact</h3>
-            <ul class='list-unstyled'>
-              <li>
-                T
-                <a href="tel:+310880060000">+31(0)88 - 00 60 000</a>
-              </li>
-              <li><a href="mailto:info@ahrend.com">info@ahrend.com</a></li>
-            </ul>
-            <ul class='list-unstyled xs-mt-1'>
-              <li>P.O. Box 1</li>
-              <li>5490 AA Sint-Oedenrode</li>
-            </ul>
-            <ul class='list-unstyled list-horizontal horizontal-icons xs-mt-2'>
-              <li><a class="icon-facebook" href="https://www.facebook.com/ahrendinrichten"></a></li>
-              <li><a class="icon-linkedin" href="https://www.linkedin.com/company/ahrend"></a></li>
-              <li><a class="icon-twitter" href="https://twitter.com/ahrendoffice"></a></li>
-              <li><a class="icon-youtube" href="https://www.youtube.com/user/AhrendOffice"></a></li>
-              <li><a class="icon-instagram" href=""></a></li>
-              <li><a class="icon-pinterest" href="http://pinterest.com/ahrend"></a></li>
-              <li><a class="icon-google-plus" href=""></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <script src="/javascripts/all.js" type="text/javascript"></script>
-  </body>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+<title>Blog detail</title>
+<link href='/images/favicons/apple-touch-icon-57x57.png' rel='apple-touch-icon' sizes='57x57'>
+<link href='/images/favicons/apple-touch-icon-60x60.png' rel='apple-touch-icon' sizes='60x60'>
+<link href='/images/favicons/apple-touch-icon-72x72.png' rel='apple-touch-icon' sizes='72x72'>
+<link href='/images/favicons/apple-touch-icon-76x76.png' rel='apple-touch-icon' sizes='76x76'>
+<link href='/images/favicons/apple-touch-icon-114x114.png' rel='apple-touch-icon' sizes='114x114'>
+<link href='/images/favicons/apple-touch-icon-120x120.png' rel='apple-touch-icon' sizes='120x120'>
+<link href='/images/favicons/apple-touch-icon-144x144.png' rel='apple-touch-icon' sizes='144x144'>
+<link href='/images/favicons/apple-touch-icon-152x152.png' rel='apple-touch-icon' sizes='152x152'>
+<link href='/images/favicons/apple-touch-icon-180x180.png' rel='apple-touch-icon' sizes='180x180'>
+<link href='/images/favicons/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'>
+<link href='/images/favicons/favicon-194x194.png' rel='icon' sizes='194x194' type='image/png'>
+<link href='/images/favicons/favicon-96x96.png' rel='icon' sizes='96x96' type='image/png'>
+<link href='/images/favicons/android-chrome-192x192.png' rel='icon' sizes='192x192' type='image/png'>
+<link href='/images/favicons/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
+<link href='/images/favicons/manifest.json' rel='manifest'>
+<link href='/images/favicons/favicon.ico' rel='shortcut icon'>
+<meta content='#da532c' name='msapplication-TileColor'>
+<meta content='/images/favicons/mstile-144x144.png' name='msapplication-TileImage'>
+<meta content='/images/favicons/browserconfig.xml' name='msapplication-config'>
+<meta content='#ffffff' name='theme-color'>
+
+<link href="/stylesheets/application.css" rel="stylesheet" type="text/css" />
+<!-- = stylesheet_link_tag :application, :media => "none", :onload => "if(media!='all')media='all'" -->
+</head>
+<body>
+<header class='menu js_menu'>
+<div class='container'>
+<a class="logo" href="/"></a>
+<div class='menu__hamburger icon-menu'>
+<span>Menu</span>
+</div>
+<div class='menu__close icon-close'></div>
+<div class='menu__users'>
+<ul>
+<li><a href="#">Account aanmaken</a></li>
+<li><a href="#">Inloggen</a></li>
+</ul>
+<div class='menu__language-switch js_toggle'>
+<ul>
+<li class='js_toggle__select current'>
+<span>Nederlands</span>
+</li>
+<li><a href="#">Nederlands</a></li>
+<li><a href="#">English</a></li>
+</ul>
+</div>
+</div>
+<!-- .menu__search -->
+<!-- %a.icon-search -->
+<!-- .menu__close.icon-close -->
+<!-- %form.menu__input -->
+<!-- %a.icon-search -->
+<!-- %input{:type => "search", :placeholder => "Zoeken"} -->
+</div>
+<nav class='menu__nav'>
+<div class='container'>
+<ul class='menu__main'>
+<li class='has-sub'>
+<a href="#">Woningaanbod</a>
+<ul class='menu__sub'>
+<li><a href="#">Koopwoningen</a></li>
+<li><a href="#">Huurwoningen</a></li>
+<li><a href="#">Nieuwbouw</a></li>
+<li><a href="#">Recreatie</a></li>
+<li><a href="#">Europees aanbod</a></li>
+</ul>
+</li>
+<li><a href="#">Huis plaatsen</a></li>
+<li><a href="#">NVM makelaars</a></li>
+<li><a href="#">Mijn funda</a></li>
+</ul>
+</div>
+</nav>
+</header>
+
+<!-- .site-wrapper{:class => page_classes} -->
+<!-- = yield -->
+<!-- = partial "partials/footer" -->
+<script src="/javascripts/all.js" type="text/javascript"></script>
+</body>
 </html>
