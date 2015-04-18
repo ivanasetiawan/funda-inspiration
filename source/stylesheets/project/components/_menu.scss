@@ -1,32 +1,21 @@
 // Main menu on top header
 
-.ahrend {
-	color: cl("red");
+.logo {
 	display: inline-block;
-	position: relative;
+	background: image-url("images/logo.png") center no-repeat;
+	background-size: contain;
+	width: 90px;
+	height: 32px;
 
-	&:before {
-		position: absolute;
-		left: 0;
-		height: 50px;
-	}
-
-	@include bp("md+") { 
-		width: 120px;
-		height: 50px;
-		vertical-align: middle;
+	@include bp("md+") {
 		float: left;
-		margin-top: em(20px);
-		&:before { font-size: 120px; }
+		margin-top: em(13px);
 	}
 
 	@include bp("md-") { 
 		padding: 10px 0;
-		width: 90px;
-		height: 30px;
 		position: relative;
 		z-index: 101;
-		&:before { font-size: 90px; }
 		
 		.active & {
 			position: fixed;
@@ -39,8 +28,6 @@
 	@at-root .is-sticky & {
 		@include bp("md+") {
 			margin-top: em(10px);
-			width: em(90px); 
-			height: em(30px);
 
 			&:before {
 				font-size: em(90px);
@@ -78,14 +65,25 @@
 
 .menu {
 	background-color: cl("white");		
+	height: em(60px);
+	line-height: em(50px);
+	padding-bottom: em(35px);
 
+	ul { @extend %clearlist; }
+	
+	a { display: block; }
+	
 	.container { position: relative; }
+
+	@include bp("md+") { position: relative; }
+
+	li  {
+		@include bp("md+") { display: inline-block; }
+	}
 
 	// Specific for sticky menu MD+
 	&.is-sticky {
 		@include bp("md+") { 
-			height: em(60px);
-			line-height: em(60px);
 			position: fixed;
 			z-index: 200;
 			top: 0;
@@ -98,29 +96,30 @@
 					display: block; 
 				}
 			
-				.menu__nav, 
-				li { 
-					margin-left: 0;
-					line-height: 42px;
-					font-size: 32px;
-				}
+				.menu__nav {
+					li { 
+						margin-left: 0;
+						line-height: 42px;
+						font-size: 32px;
+					}
 
-				.menu__nav > ul > li {
-					&:last-child { border-bottom: 0; }
-					
-					> a {
-						display: block;
-						padding: 20px;
-						border-bottom: solid 1px cl("grey-medium");
-						margin-top: -1px;
-						position: relative;
+					> ul > li {
+						&:last-child { border-bottom: 0; }
+						
+						> a {
+							display: block;
+							padding: 20px;
+							border-bottom: solid 1px cl("grey-medium");
+							margin-top: -1px;
+							position: relative;
 
-						&:before { 
-							display: inline-block; 
-							font-size: 15px;
-							position: absolute;
-							top: 50%;
-							right: 20px;
+							&:before { 
+								display: inline-block; 
+								font-size: 15px;
+								position: absolute;
+								top: 50%;
+								right: 20px;
+							}
 						}
 					}
 				}
@@ -151,14 +150,6 @@
 	}
 	// END: Specific for sticky menu MD+
 
-	ul { @extend %clearlist; }
-
-	a {
-		&:hover, .clicked {
-			color: cl("red");
-		}
-	}
-
 	// For body when menu is active
 	&-active { overflow-y: hidden; }
 
@@ -173,23 +164,23 @@
 			.menu__hamburger { display: none; }
 		}
 	}
-
-	@include bp("md+") {
-		height: em(80px);
-		line-height: em(80px);
-		position: relative;
-	}
-
-	li  {
-		@include bp("md+") { display: inline-block; }
-	}
 	
 	&__nav {
-		text-align: left;
-		font-size: em(15px);
 		line-height: 1;
+		background: cl("funda-blue-light");
+		position: absolute;
+		width: 100%;
+		top: em(60px);
+		left: 0;
 
-		a { color: cl("grey-dark"); }
+		a { 
+
+
+			&:hover, &.clicked {
+				opacity: 1;
+				&:after { opacity: 1; }
+			}
+		}
 
 		@at-root .is-sticky & {
 			@include bp("md+") { 
@@ -227,12 +218,12 @@
 			}
 		}
 
-		> ul {
-			@include bp("md-") { 
-				max-width: em(600px); 
-				margin: 0 auto; 
-			}
-		}
+		// > ul {
+		// 	@include bp("md-") { 
+		// 		max-width: em(600px); 
+		// 		margin: 0 auto; 
+		// 	}
+		// }
 
 		> ul > li {
 
@@ -305,9 +296,39 @@
 		}
 
 		@include bp("md+") {
-			float: left;
-			margin-top: em(45px);
-			li { margin-left: em(20px); }
+			li { 
+				margin-left: em(20px); 
+				margin-bottom: 0;
+				&:first-child { margin-left: 0; }
+			}
+
+			a {
+				padding-top: em(10px);
+				padding-bottom: em(14px);
+
+				color: cl("white"); 
+				opacity: 0.7;
+				transition: opacity 0.2s;
+				position: relative;
+
+				&:after {
+					content: "";
+					display: block;
+					width: 100%;
+					height: 4px;
+					background: cl("funda-blue-dark");
+					position: absolute;
+					bottom: 0; 
+					left: 0;
+					opacity: 0;
+					transition: opacity 0.2s;
+				}
+
+				&:hover, &.clicked {
+					opacity: 1;
+					&:after { opacity: 1; }
+				}
+			}
 		}
 
 	}
@@ -406,19 +427,37 @@
 		}
 	}
 
-	&__language-switch {
+	&__users {
 		font-size: em(15px);
 		line-height: 1;
 		z-index: 3;
 		text-align: right;
 		display: none;
+		
+		a { color: cl("grey-text"); }
 
 		@include bp("md+") {
 			display: block;
 			position: absolute;
-			top: em(30px);
-			right: em(70px);
+			right: 65px;
+			top: 20px;
+
+			> ul, > div {
+				float: left;
+				> li { 
+					padding: 0 em(10px); 
+					border-right: solid 1px cl("grey-medium");
+				}
+			}
+		}
+	}
+
+	&__language-switch {
+
+		@include bp("md+") {
+			margin-top: em(-15px);
 			padding: em(15px);
+			min-width: em(90px);
 		}
 
 		@at-root .is-sticky & {
@@ -427,8 +466,6 @@
 				right: 140px;
 			}
 		}
-
-		a { color: cl("grey-text"); }
 
 		li {
 			cursor: pointer;
@@ -527,7 +564,7 @@
 		}
 
 		.icon-search {
-			font-size: em(25px);
+			font-size: em(50px);
 			color: cl("grey-text");
 			position: absolute;
 			top: 2px;
@@ -544,7 +581,6 @@
 			padding: 15px;
 
 			@include bp("md+") {
-				margin-top: 5px;
 				font-size: em(40px);
 			}
 		}

@@ -5,7 +5,7 @@
     %meta{ :content => "IE=edge", "http-equiv" => "X-UA-Compatible" }/
     %meta{ :content => "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no", :name => "viewport" }/
     %link{:href => "http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700", :rel => "stylesheet", :type => "text/css"}/
-    %title= current_page.data.title || "Ahrend"
+    %title= current_page.data.title || "Funda"
 
     = partial "partials/favicons"
     = stylesheet_link_tag :application
@@ -16,9 +16,9 @@
     
     = partial "partials/nav"
     
-    .site-wrapper{:class => page_classes}
-      = yield
+    / .site-wrapper{:class => page_classes}
+    /   = yield
       
-    = partial "partials/footer"
+    / = partial "partials/footer"
 
     = javascript_include_tag :all

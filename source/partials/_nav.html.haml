@@ -1,50 +1,22 @@
 %header.menu.js_menu
 	.container
-		= link_to "", "/", class: "ahrend icon-ahrend-logo"
+		= link_to "", "/", class: "logo"
 		
 		.menu__hamburger.icon-menu
 			%span Menu
 		.menu__close.icon-close
 
-		%nav.menu__nav
+		.menu__users
 			%ul
-				%li= link_to "Producten", "#"
-				%li= link_to "Projecten", "#"
-				%li
-					= link_to "Concepten", "#"
-					%ul.menu__sub
-						%li= link_to "Office Lifestyle ", "#"
-						%li= link_to "Duurzaamheid", "#"
-						%li= link_to "Design", "#"
-						%li= link_to "Akoestiek", "#"
-						%li= link_to "Ergonomie", "#"
-						%li= link_to "Onderwijs", "#"
-						%li= link_to "Zorg", "#"
-				%li
-					= link_to "Diensten", "#"
-					%ul.menu__sub
-						%li= link_to "Ahrend Leasing ", "#"
-						%li= link_to "Ahrend Hergebruik", "#"
-						%li= link_to "Inrichten", "#"
-				%li
-					= link_to "Over ons", "#"
-					%ul.menu__sub
-						%li= link_to "MVO", "#"
-						%li= link_to "Organisatie", "#"
-						%li= link_to "Heritage", "#"
-						%li= link_to "Werken bij Ahrend", "#"
-						%li= link_to "Actueel/Journal", "#"
-						%li= link_to "Contact", "#"
-
-				%li= link_to "Downloads", "#"
-
-		.menu__language-switch.js_toggle
-			%ul
-				%li.js_toggle__select.current
-					%span Nederlands
-				%li= link_to "Nederlands", "#"
-				%li= link_to "English", "#"
-				%li= link_to "Deutsch", "#"
+				%li= link_to "Account aanmaken", "#"
+				%li= link_to "Inloggen", "#"
+			      
+			.menu__language-switch.js_toggle
+				%ul
+					%li.js_toggle__select.current
+						%span Nederlands
+					%li= link_to "Nederlands", "#"
+					%li= link_to "English", "#"
 
 		.menu__search
 			%a.icon-search
@@ -52,3 +24,51 @@
 			%form.menu__input
 				%a.icon-search
 				%input{:type => "search", :placeholder => "Zoeken"}
+
+	%nav.menu__nav
+		.container
+			%ul
+				%li
+					= link_to "Woningaanbod", "#", :class => "clicked"
+					%ul.menu__sub
+						%li= link_to "Koopwoningen", "#"
+						%li= link_to "Huurwoningen", "#"
+						%li= link_to "Nieuwbouw", "#"
+						%li= link_to "Recreatie", "#"
+						%li= link_to "Europees aanbod", "#"
+				%li= link_to "Huis plaatsen", "#"
+				%li= link_to "NVM makelaars", "#"
+				%li= link_to "Mijn funda", "#"
+                       
+		/ %nav.menu__nav
+		/ 	%ul
+		/ 		%li= link_to "Producten", "#"
+		/ 		%li= link_to "Projecten", "#"
+		/ 		%li
+		/ 			= link_to "Concepten", "#"
+		/ 			%ul.menu__sub
+		/ 				%li= link_to "Office Lifestyle ", "#"
+		/ 				%li= link_to "Duurzaamheid", "#"
+		/ 				%li= link_to "Design", "#"
+		/ 				%li= link_to "Akoestiek", "#"
+		/ 				%li= link_to "Ergonomie", "#"
+		/ 				%li= link_to "Onderwijs", "#"
+		/ 				%li= link_to "Zorg", "#"
+		/ 		%li
+		/ 			= link_to "Diensten", "#"
+		/ 			%ul.menu__sub
+		/ 				%li= link_to "Ahrend Leasing ", "#"
+		/ 				%li= link_to "Ahrend Hergebruik", "#"
+		/ 				%li= link_to "Inrichten", "#"
+		/ 		%li
+		/ 			= link_to "Over ons", "#"
+		/ 			%ul.menu__sub
+		/ 				%li= link_to "MVO", "#"
+		/ 				%li= link_to "Organisatie", "#"
+		/ 				%li= link_to "Heritage", "#"
+		/ 				%li= link_to "Werken bij Ahrend", "#"
+		/ 				%li= link_to "Actueel/Journal", "#"
+		/ 				%li= link_to "Contact", "#"
+
+		/ 		%li= link_to "Downloads", "#"
+
