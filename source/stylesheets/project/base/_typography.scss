@@ -53,11 +53,11 @@ ul {
 }
 
 a {
-	color: cl("red");
+	color: cl("funda-blue-dark");
 	text-decoration: none;
 	transition: color 0.2s ease-in-out;
 	&:hover {
-		color: darken(cl("red"), 10%);
+		color: darken(cl("funda-blue-dark"), 10%);
 	}
 }
 

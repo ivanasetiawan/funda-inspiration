@@ -11,47 +11,38 @@
     text-align: center;
     margin: 0 1px 5px;
     box-sizing: border-box;
+    transition: border-color 0.2s;
     @include bp("sm+") {
       $size: 40px;
       width: $size;
       height: $size;
-      line-height: $size;
+      line-height: 35px;
       margin: 0 5px;
     }
     a { 
       color: cl("black");
       display: block;
     }
-    &.is-active { 
-      border: 2px solid cl("red"); 
-      a { color: cl("red"); }
+    &.is-active,
+    &:hover { 
+      border: 2px solid cl("funda-blue-light");
+      a { color: cl("funda-blue-light"); }
     }
     &--button { 
-      border-color: cl("red");
-      background-color: cl("red");
+      border-color: cl("funda-blue-light");
       width: auto;
-      padding: 0 15px;
-      a { color: cl("white"); }
+      background-color: cl("funda-blue-light");
+      transition: background-color 0.2s;
+      
+      a { 
+        color: cl("white");
+        padding: 0 15px;
+      }
+
+      &:hover { 
+        background-color: cl("funda-blue-dark"); 
+        a { color: cl("white"); }
+      }
     }
   }
 }
-
-////////
-// Part of pagination - view history 
-.view-history {
-  line-height: 1;
-  display: block;
-  @extend .icon-arrow-left;
-  &:before { 
-    margin-right: 1em;
-    vertical-align: top;
-    font-size: 0.7em; 
-  }
-  @include bp("md+") {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    margin-top: -0.5em;
-  }
-}
-////////

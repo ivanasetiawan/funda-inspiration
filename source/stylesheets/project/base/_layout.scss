@@ -14,19 +14,7 @@ body {
 	margin: 0;
   color: cl("black");
   background-color: cl("white");
-  // @include bp("md+") {
-  //   padding: 0 map-get($gutters, "xs");
-  //   padding-top: 0 !important;
-  // }
-  // @include bp("lg+") {
-  //   padding: 0 map-get($gutters, "md");
-  // }
-
-  &.menu-active { overflow: hidden; }
-}
-
-.site-wrapper {
-  background-color: cl("grey-light");
+  &.menu-active { overflow-x: hidden; }
 }
 
 .bottom-separator {
@@ -58,8 +46,4 @@ img {
   @include bp("sm-") {
     max-height: 320px;
   }
-}
-
-.content--horizontal {
-  p { font-size: em(18px); }
 }

@@ -23,8 +23,7 @@ $breakpoints: (
 	xs: 320px,
 	sm: 520px,
 	md: 980px,
-	lg: 1200px,
-	xl: 1320px
+	lg: 1020px
 );
 $gutters: (
 	xs: 20px,
@@ -33,8 +32,7 @@ $gutters: (
 	lg: 60px
 );
 $container-maxwidth: (
-	xl: em(1320px),
-	lg: em(1260px)
+	lg: em(1020px)
 );
 
 // *******************************************************************************
@@ -67,6 +65,7 @@ $colors: (
 	"funda-blue-light": #73cff7,
 	"funda-blue-dark": #0091d4,
 	"funda-orange": #f8b100,
+	"grey-light": #f1f1f1,
 
 	"red": #ed1c24,
 	"black": #1e1e1c true,
@@ -75,6 +74,6 @@ $colors: (
 	"grey-text": #8e8e8e,
 	"grey-medium": #e2e2e2,
 	"grey-arrow": #7e7e7e,
-	"grey-light": #F1F1F1,
+	
 	"brown": #c5ad97
 );

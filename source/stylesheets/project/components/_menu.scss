@@ -65,8 +65,8 @@
 
 .menu {
 	background-color: cl("white");		
-	height: em(55px);
-	line-height: em(55px);
+	height: em(60px);
+	line-height: em(60px);
 	padding-bottom: em(35px);
 
 	ul { @extend %clearlist; }
@@ -89,13 +89,15 @@
 			top: 0;
 			animation: slideDown 0.2s;
 
+			padding-bottom: 0; 
+
 			&.active {
 				.menu__close, 
 				.menu__nav, 
 				li { 
 					display: block; 
 				}
-			
+				
 				// .menu__nav {
 				// 	li { 
 				// 		margin-left: 0;
@@ -124,34 +126,39 @@
 				// 	}
 				// }
 
-				// .show-sub .menu__sub {
-				// 	position: relative;
-				// 	top: auto;
-				// 	height: auto;
-				// 	display: block;
-				// 	border-bottom: solid 1px cl("grey-medium");
-				// 	padding-top: 15px;
-				// 	padding-bottom: 20px;
+				.menu__nav {
+					li { margin: 0; }
+					a { color: cl("grey-text"); }
+					font-size: 20px;
+				}
 
-				// 	a { 
-				// 		color: cl("grey-text"); 
-				// 		font-size: 20px;
-				// 	}
+				.show-sub .menu__sub {
+					position: relative;
+					top: auto;
+					height: auto;
+					display: block;
+					border-bottom: solid 1px cl("grey-medium");
+					padding-top: 15px;
+					padding-bottom: 20px;
+					background: none;
+					&:before, &:after { display: none; }
 
-				// 	li { 
-				// 		padding: 5px 0; 
-				// 		margin-left: em(50px); 
-				// 		line-height: 1.5;
-				// 		font-size: 20px;
-				// 	}
-				// }
+					a { 
+						color: cl("grey-text"); 
+						padding: 0;
+					}
+
+					li { 
+						padding: 5px 0; 
+						margin-left: em(50px); 
+						line-height: 1.5;
+						font-size: 20px;
+					}
+				}
 			}
 		}
 	}
 	// END: Specific for sticky menu MD+
-
-	// For body when menu is active
-	&-active { overflow-y: hidden; }
 
 	&.active {
 		@at-root & > .menu__close { 
@@ -194,7 +201,6 @@
 				> a { opacity: 1; 
 					&:after { opacity: 1; }
 				} 
-				
 			}
 		}
 
@@ -319,11 +325,6 @@
 				opacity: 0.7;
 				transition: opacity 0.2s;
 				position: relative;
-
-				// &:hover, &.clicked {
-				// 	opacity: 1;
-				// 	&:after { opacity: 1; }
-				// }
 			}
 		}
 
@@ -443,7 +444,7 @@
 		@at-root .is-sticky & {
 			@include bp("md+") { 
 				display: block;
-				top: em(15px);
+				top: em(23px);
 				right: em(60px);
 			}
 		}
@@ -488,6 +489,12 @@
 					padding: 0 em(10px); 
 					border-right: solid 1px cl("grey-medium");
 				}
+			}
+		}
+
+		@at-root .is-sticky & {
+			@include bp("md+") {
+				right: 120px;
 			}
 		}
 	}
@@ -543,44 +550,44 @@
 		}
 	}
 	
-	&__search {
-		> .icon-search {
-			position: absolute;
-			top: 7px;
-			right: 30px;
-			color: cl("grey-text");
-			cursor: pointer;
-			font-size: em(20);
+	// &__search {
+	// 	> .icon-search {
+	// 		position: absolute;
+	// 		top: 7px;
+	// 		right: 30px;
+	// 		color: cl("grey-text");
+	// 		cursor: pointer;
+	// 		font-size: em(20);
 
-			@at-root .is-sticky & {
-				@include bp("md+") {
-					top: 0;
-				}
-			}
+	// 		@at-root .is-sticky & {
+	// 			@include bp("md+") {
+	// 				top: 0;
+	// 			}
+	// 		}
 
-			@include bp("md-") {
-				right: 10px;
-				top: 17px;
-			}
-		}
+	// 		@include bp("md-") {
+	// 			right: 10px;
+	// 			top: 17px;
+	// 		}
+	// 	}
 
-		// &.show-search {
-		// 	width: 100%;
-		// 	height: 100%;
-		// 	position: fixed;
-		// 	background: cl("white");
-		// 	z-index: 100;
-		// 	top: 0;
-		// 	left: 0;
+	// 	// &.show-search {
+	// 	// 	width: 100%;
+	// 	// 	height: 100%;
+	// 	// 	position: fixed;
+	// 	// 	background: cl("white");
+	// 	// 	z-index: 100;
+	// 	// 	top: 0;
+	// 	// 	left: 0;
 
-		// 	> .icon-search { display: none; }
-		// 	> .icon-close { display: block; }
+	// 	// 	> .icon-search { display: none; }
+	// 	// 	> .icon-close { display: block; }
 
-		// 	@at-root & .menu__input {
-		// 		display: block;
-		// 	}
-		// }
-	}
+	// 	// 	@at-root & .menu__input {
+	// 	// 		display: block;
+	// 	// 	}
+	// 	// }
+	// }
 
 	// &__input {
 	// 	width: 50%;
