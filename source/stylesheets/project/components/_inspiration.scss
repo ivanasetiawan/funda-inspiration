@@ -1,0 +1,69 @@
+.inspirations-list {
+  .flexbox & {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include bp("sm+") {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+}
+
+.inspiration {
+  display: inline-block;
+  margin-right: -4px;
+  vertical-align: top;
+  box-sizing: border-box;
+  @include bp("sm+") { 
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 50%; 
+  }
+  @include bp("md+") { 
+    width: 33.33%; 
+  }
+  .flexbox & {
+    display: flex;
+    margin-right: 0;
+  }
+  &__inner {
+    color: cl("black");
+    display: block;
+    background-color: cl("grey-light");
+  }
+  &__image {
+    position: relative;
+    min-height: 230px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: filter 0.2s;
+  }
+  &__location {
+    color: cl("grey-text");
+    p:before { margin-right: 5px; }
+  }
+  &__text {
+    padding: 30px 20px;
+  }
+  &__label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: cl("grey-light");
+    padding: 5px 20px;
+  }
+  &__day, &__date { 
+    display: inline-block;
+    vertical-align: middle
+  }
+  &__day {
+    margin: 0 15px 0 0;
+    line-height: 1em; 
+  }
+  &__date {
+    color: cl("grey-text");
+    line-height: 1.2em;
+    font-size: 0.875em;
+  }
+}

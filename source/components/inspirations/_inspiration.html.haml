@@ -1,0 +1,11 @@
+.inspiration.xs-mb-1
+  = link_to "inspiration-detail.html", class: "inspiration__inner bg-white" do
+    .inspiration__image{:class => "b-lazy", :data => {"src" => inspiration.photo, "src-sm" => inspiration.photo, "src-md" => inspiration.photo, "src-lg" => inspiration.photo, "src-xl" => inspiration.photo } }
+      .inspiration__label
+        = inspiration.location
+    .inspiration__text
+      %h2.h3= inspiration.title
+      %p.bottom-separator--light.bottom-separator= inspiration.intro
+      = inspiration.tags
+
+      

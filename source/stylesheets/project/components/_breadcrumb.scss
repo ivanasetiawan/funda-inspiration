@@ -1,0 +1,26 @@
+.breadcrumb {
+	font-size: 14px;
+
+	> li {
+		display: inline-block;
+		padding: 0 10px; 
+		position: relative;
+
+		&:not(:last-child) { @extend .icon-arrow-right; }
+	 
+		&:before {
+			position: absolute;
+			top: 50%;
+			right: -8px;
+			margin-top: -5px;
+			font-size: 10px;
+			color: cl("grey-text");
+		}
+		&:first-child { padding-left: 0; }
+	}
+} 
+
+.go-back {
+	font-size: 14px;
+	float: right;		
+}

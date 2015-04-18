@@ -1,0 +1,13 @@
+---
+title: Inspiration overview
+---
+
+= partial "components/inspirations/header"
+
+%article.xs-mt-1.xs-mb-1.container
+  .row
+    .xs-12.inspirations-list
+      - data.inspirations.each do |inspiration|
+        = partial "components/inspirations/inspiration", locals: { inspiration: inspiration }
+
+= partial "components/pagination"
