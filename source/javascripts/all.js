@@ -50,21 +50,22 @@ $(document).ready(function() {
 	// Menu behaviour
 	(function( $ ){
 		 $.fn.menuBehaviour = function(event) {
-				var menuUrl 				= $(this).find('.menu__nav > ul > li > a'),
-						mainNavList 		= $(this).find('.menu__nav > ul > li'),
+				var menuUrl 				= $(this).find('.menu__main > li > a'),
+						mainNavList 		= $(this).find('.menu__main > li'),
 						hamburgerMenu 	= $(this).find('.menu__hamburger'),
 						closeBtn 				= $(this).find('.menu__close'),
 						searchBtn 			= $(this).find('.menu__search > .icon-search');
 
 				menuUrl.click(function(event) {
-					
 					event.preventDefault();
 
 					if(!$(this).parents('li').hasClass('show-sub')) {
 						mainNavList.removeClass('show-sub');
 						$(this).parents('li').addClass('show-sub');
+						$('body').addClass('menu-active');
 					} else {
 						$(this).parents('li').removeClass('show-sub');
+						$('body').removeClass('menu-active');
 					}
 
 				});

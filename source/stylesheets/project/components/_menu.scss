@@ -65,8 +65,8 @@
 
 .menu {
 	background-color: cl("white");		
-	height: em(60px);
-	line-height: em(50px);
+	height: em(55px);
+	line-height: em(55px);
 	padding-bottom: em(35px);
 
 	ul { @extend %clearlist; }
@@ -96,55 +96,55 @@
 					display: block; 
 				}
 			
-				.menu__nav {
-					li { 
-						margin-left: 0;
-						line-height: 42px;
-						font-size: 32px;
-					}
+				// .menu__nav {
+				// 	li { 
+				// 		margin-left: 0;
+				// 		line-height: 42px;
+				// 		font-size: 32px;
+				// 	}
 
-					> ul > li {
-						&:last-child { border-bottom: 0; }
+				// 	> ul > li {
+				// 		&:last-child { border-bottom: 0; }
 						
-						> a {
-							display: block;
-							padding: 20px;
-							border-bottom: solid 1px cl("grey-medium");
-							margin-top: -1px;
-							position: relative;
+				// 		> a {
+				// 			display: block;
+				// 			padding: 20px;
+				// 			border-bottom: solid 1px cl("grey-medium");
+				// 			margin-top: -1px;
+				// 			position: relative;
 
-							&:before { 
-								display: inline-block; 
-								font-size: 15px;
-								position: absolute;
-								top: 50%;
-								right: 20px;
-							}
-						}
-					}
-				}
+				// 			&:before { 
+				// 				display: inline-block; 
+				// 				font-size: 15px;
+				// 				position: absolute;
+				// 				top: 50%;
+				// 				right: 20px;
+				// 			}
+				// 		}
+				// 	}
+				// }
 
-				.show-sub .menu__sub {
-					position: relative;
-					top: auto;
-					height: auto;
-					display: block;
-					border-bottom: solid 1px cl("grey-medium");
-					padding-top: 15px;
-					padding-bottom: 20px;
+				// .show-sub .menu__sub {
+				// 	position: relative;
+				// 	top: auto;
+				// 	height: auto;
+				// 	display: block;
+				// 	border-bottom: solid 1px cl("grey-medium");
+				// 	padding-top: 15px;
+				// 	padding-bottom: 20px;
 
-					a { 
-						color: cl("grey-text"); 
-						font-size: 20px;
-					}
+				// 	a { 
+				// 		color: cl("grey-text"); 
+				// 		font-size: 20px;
+				// 	}
 
-					li { 
-						padding: 5px 0; 
-						margin-left: em(50px); 
-						line-height: 1.5;
-						font-size: 20px;
-					}
-				}
+				// 	li { 
+				// 		padding: 5px 0; 
+				// 		margin-left: em(50px); 
+				// 		line-height: 1.5;
+				// 		font-size: 20px;
+				// 	}
+				// }
 			}
 		}
 	}
@@ -159,7 +159,8 @@
 		}
 	}
 
-	@include bp("md-") { 
+	@include bp("md-") {
+		padding-bottom: 0; 
 		&.active { 
 			.menu__hamburger { display: none; }
 		}
@@ -173,12 +174,27 @@
 		top: em(60px);
 		left: 0;
 
-		a { 
-
-
-			&:hover, &.clicked {
-				opacity: 1;
-				&:after { opacity: 1; }
+		li { 
+			&.has-sub {
+				> a {
+					padding-right: 20px; 
+					position: relative;
+					@extend .icon-arrow-down;
+					&:before {
+						position: absolute;
+						font-size: 10px;
+						right: 0;
+						top: 50%;
+						margin-top: -5px;
+					}
+				}
+				&.show-sub > a:before { content: "\f110"; }
+			}
+			&:hover, &.show-sub {
+				> a { opacity: 1; 
+					&:after { opacity: 1; }
+				} 
+				
 			}
 		}
 
@@ -217,13 +233,6 @@
 				}
 			}
 		}
-
-		// > ul {
-		// 	@include bp("md-") { 
-		// 		max-width: em(600px); 
-		// 		margin: 0 auto; 
-		// 	}
-		// }
 
 		> ul > li {
 
@@ -311,6 +320,19 @@
 				transition: opacity 0.2s;
 				position: relative;
 
+				// &:hover, &.clicked {
+				// 	opacity: 1;
+				// 	&:after { opacity: 1; }
+				// }
+			}
+		}
+
+	}
+
+	&__main {
+		
+		> li > a {
+			@include bp("md+") {
 				&:after {
 					content: "";
 					display: block;
@@ -323,14 +345,17 @@
 					opacity: 0;
 					transition: opacity 0.2s;
 				}
-
-				&:hover, &.clicked {
-					opacity: 1;
-					&:after { opacity: 1; }
-				}
-			}
+			}		
 		}
 
+		@include bp("md-") { 
+			max-width: em(400px); 
+			margin: 50px auto 0 !important; 
+
+			a { color: cl("grey-text"); 
+				&:hover { color: cl("funda-blue-dark"); }
+			}
+		}
 	}
 
 	&__sub {
@@ -347,9 +372,26 @@
 			@include bp("md-") {
 				display: block;
 				border-bottom: solid 1px cl("grey-medium");
-				li { padding: 5px 0; }
+				font-size: em(14px);
+				margin-top: 10px;
+				padding-bottom: 10px;
+				li { padding: 5px 0;  margin-bottom: 0; }
 			}
 
+			@include bp("md+") {
+				&:before, &:after {
+					width: 100%;
+					height: 40px;
+					background: cl("funda-orange");
+					content: "";
+					display: block;
+					position: absolute;
+					left: -100%;
+					top: 0;
+				}
+
+				&:after { left: auto; right: -100%;}
+			}
 		}
 
 		@include bp("md-") {
@@ -361,13 +403,14 @@
 		@include bp("md+") {
 			width: 100%;
 			position: absolute;
-			top: em(80px);
+			top: em(40px);
 			left: 0;
 			transform: translateY(-100%);
-			line-height: 50px;
-			height: 50px;		
-			background: rgba(255, 255, 255, 0.85);
+			background: cl("funda-orange");
+
+			li:first-child { margin-left: 15px; }
 		}
+		@include bp("lg+") { li:first-child { margin-left: 30px; } }
 	}
 
 	&__hamburger,
@@ -377,25 +420,24 @@
 		width: 25px;
 		height: 25px;
 		position: absolute;
-		top: 15px;
-		right: 15px;
+		// top: 15px;
+		right: 10px;
 		color: cl("grey-text");
 
 		@include bp("md-") { display: block; }
 	}
 
 	&__hamburger {
-		width: 75px;
-		right: 50px;
-		top: em(15px);
+		width: 60px;
+		top: em(20px);
 		text-transform: uppercase;
 		
 		span, &:before {
 			position: absolute;
-			top: 7px;
 			line-height: 1;
 		}
 
+		span{ top: -3px; }
 		&:before { right: 0; }
 		
 		@at-root .is-sticky & {
@@ -410,16 +452,12 @@
 
 	&__close {
 		left: auto;
-		right: 15px;
-		top: 0;
 		position: fixed;
 		z-index: 102;
 		display: none;
-		background: cl("white");
 
 		@include bp("md-") {
 			.active & { display: block; }
-			top: 15px;
 		}
 
 		@at-root .is-sticky .active & {
@@ -434,7 +472,9 @@
 		text-align: right;
 		display: none;
 		
-		a { color: cl("grey-text"); }
+		a { color: cl("grey-text"); 
+			&:hover { color: cl("funda-blue-dark"); }
+		}
 
 		@include bp("md+") {
 			display: block;
@@ -457,7 +497,7 @@
 		@include bp("md+") {
 			margin-top: em(-15px);
 			padding: em(15px);
-			min-width: em(90px);
+			min-width: 70px;
 		}
 
 		@at-root .is-sticky & {
@@ -498,7 +538,7 @@
 			
 			@include bp("md+") {
 				background: cl("white");
-				box-shadow: 0 0 3px cl("grey-light");
+				box-shadow: 0 0 3px cl("grey-medium");
 			}
 		}
 	}
@@ -524,65 +564,65 @@
 			}
 		}
 
-		&.show-search {
-			width: 100%;
-			height: 100%;
-			position: fixed;
-			background: cl("white");
-			z-index: 100;
-			top: 0;
-			left: 0;
+		// &.show-search {
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	position: fixed;
+		// 	background: cl("white");
+		// 	z-index: 100;
+		// 	top: 0;
+		// 	left: 0;
 
-			> .icon-search { display: none; }
-			> .icon-close { display: block; }
+		// 	> .icon-search { display: none; }
+		// 	> .icon-close { display: block; }
 
-			@at-root & .menu__input {
-				display: block;
-			}
-		}
+		// 	@at-root & .menu__input {
+		// 		display: block;
+		// 	}
+		// }
 	}
 
-	&__input {
-		width: 50%;
-		height: 80px;
-		padding-right: 50px;
-		box-sizing: border-box;
-		background: cl("grey-light");
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		margin-left: -30%;
-		margin-top: -40px;
+	// &__input {
+	// 	width: 50%;
+	// 	height: 80px;
+	// 	padding-right: 50px;
+	// 	box-sizing: border-box;
+	// 	background: cl("grey-light");
+	// 	position: absolute;
+	// 	top: 50%;
+	// 	left: 50%;
+	// 	margin-left: -30%;
+	// 	margin-top: -40px;
 
-		display: none;
+	// 	display: none;
 
-		@include bp("md-") {
-			height: 50px;
-			width: 80%;
-			margin-left: -40%;
-			margin-top: -25px;
-		}
+	// 	@include bp("md-") {
+	// 		height: 50px;
+	// 		width: 80%;
+	// 		margin-left: -40%;
+	// 		margin-top: -25px;
+	// 	}
 
-		.icon-search {
-			font-size: em(50px);
-			color: cl("grey-text");
-			position: absolute;
-			top: 2px;
-			right: 20px;
-			@include bp("md-") {
-				top: 12px;
-			}
-		}
+	// 	.icon-search {
+	// 		font-size: em(50px);
+	// 		color: cl("grey-text");
+	// 		position: absolute;
+	// 		top: 2px;
+	// 		right: 20px;
+	// 		@include bp("md-") {
+	// 			top: 12px;
+	// 		}
+	// 	}
 
-		input {
-			background: transparent;
-			border: 0;			
-			width: 100%;
-			padding: 15px;
+	// 	input {
+	// 		background: transparent;
+	// 		border: 0;			
+	// 		width: 100%;
+	// 		padding: 15px;
 
-			@include bp("md+") {
-				font-size: em(40px);
-			}
-		}
-	}
+	// 		@include bp("md+") {
+	// 			font-size: em(40px);
+	// 		}
+	// 	}
+	// }
 }

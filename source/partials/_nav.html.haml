@@ -18,18 +18,18 @@
 					%li= link_to "Nederlands", "#"
 					%li= link_to "English", "#"
 
-		.menu__search
-			%a.icon-search
-			.menu__close.icon-close
-			%form.menu__input
-				%a.icon-search
-				%input{:type => "search", :placeholder => "Zoeken"}
+		/ .menu__search
+		/ 	%a.icon-search
+		/ 	.menu__close.icon-close
+		/ 	%form.menu__input
+		/ 		%a.icon-search
+		/ 		%input{:type => "search", :placeholder => "Zoeken"}
 
 	%nav.menu__nav
 		.container
-			%ul
-				%li
-					= link_to "Woningaanbod", "#", :class => "clicked"
+			%ul.menu__main
+				%li.has-sub
+					= link_to "Woningaanbod", "#"
 					%ul.menu__sub
 						%li= link_to "Koopwoningen", "#"
 						%li= link_to "Huurwoningen", "#"
@@ -40,35 +40,3 @@
 				%li= link_to "NVM makelaars", "#"
 				%li= link_to "Mijn funda", "#"
                        
-		/ %nav.menu__nav
-		/ 	%ul
-		/ 		%li= link_to "Producten", "#"
-		/ 		%li= link_to "Projecten", "#"
-		/ 		%li
-		/ 			= link_to "Concepten", "#"
-		/ 			%ul.menu__sub
-		/ 				%li= link_to "Office Lifestyle ", "#"
-		/ 				%li= link_to "Duurzaamheid", "#"
-		/ 				%li= link_to "Design", "#"
-		/ 				%li= link_to "Akoestiek", "#"
-		/ 				%li= link_to "Ergonomie", "#"
-		/ 				%li= link_to "Onderwijs", "#"
-		/ 				%li= link_to "Zorg", "#"
-		/ 		%li
-		/ 			= link_to "Diensten", "#"
-		/ 			%ul.menu__sub
-		/ 				%li= link_to "Ahrend Leasing ", "#"
-		/ 				%li= link_to "Ahrend Hergebruik", "#"
-		/ 				%li= link_to "Inrichten", "#"
-		/ 		%li
-		/ 			= link_to "Over ons", "#"
-		/ 			%ul.menu__sub
-		/ 				%li= link_to "MVO", "#"
-		/ 				%li= link_to "Organisatie", "#"
-		/ 				%li= link_to "Heritage", "#"
-		/ 				%li= link_to "Werken bij Ahrend", "#"
-		/ 				%li= link_to "Actueel/Journal", "#"
-		/ 				%li= link_to "Contact", "#"
-
-		/ 		%li= link_to "Downloads", "#"
-
