@@ -1,161 +1,20 @@
-.container.gallery.xs-mb-1c
+.container.gallery.xs-pt-2
 	.row
-		.xs-12.gallery__image
-			%img{:class => "b-lazy", :src => "images/inspirations/house/house_1.jpg", :data => {"src" => "images/inspirations/house/house_1.jpg", "src-sm" => "images/inspirations/house/house_1.jpg", "src-md" => "images/inspirations/house/house_1.jpg", "src-lg" => "images/inspirations/house/house_1.jpg", "src-xl" => "images/inspirations/house/house_1.jpg"}}
+		%article.gallery-flickity.xs-mb-2
+	
+			= partial "components/inspirations/gallery-1"
+			= partial "components/inspirations/gallery-2"
+			= partial "components/inspirations/gallery-3"
+			
+	.row.gallery__info
+		.xs-12.lg-8
+			%h2 Bloemgracht 81 IV
+			%span.postcode 1016 KH Amsterdam
+			%p 
+				Spectaculair, smaakvol en zeer comfortabel appartement van ca. 215 m2 met balkon zuid en 2 parkeerplaatsen op het mooiste stukje van de Bloemgracht. Uitzicht op de gracht aan de voorzijde en op de Westertoren aan de achterzijd...
+				= link_to "Meer over Bloemgracht 81 IV", '#'
 
-			= link_to "#product1", :class => "gallery__btn popup-modal", :style => "top: 20%; left: 43%" do
-				.icon-search
-			= link_to "#product2", :class => "gallery__btn popup-modal", :style => "top: 40%; right: 22%;" do
-				.icon-search
-			= link_to "#product3", :class => "gallery__btn popup-modal", :style => "top: 56%; right: 30%;" do
-				.icon-search
+		.xs-12.lg-4
+			%p.price € 1.295.000 k.k.
 
-			#product1.white-popup-block.mfp-hide.zoom-anim-dialog
-				%h2 Afzuigkap
-
-				.option
-					.option__img
-						%img{:src => "images/inspirations/house/afzuigkap.jpg"}
-						%span.ori original
-					.option__content
-						%h3 BOSCH
-						%span € 749.-
-						%dl
-							%dt Energylabel
-							%dd A
-							%dt Garantie
-							%dd 5 jaar
-					.option__btn
-						= link_to "Sponsor URL", "#", :class => "button"
-
-				.option
-					.option__img
-						%img{:src => "images/inspirations/house/afzuigkap.jpg"}
-						%span best for value
-					.option__content
-						%h3 MOLNIGT at IKEA
-						%span € 349.-
-						%dl
-							%dt Energylabel
-							%dd C
-							%dt Garantie
-							%dd 5 jaar
-					.option__btn
-						= link_to "Sponsor URL", "#", :class => "button"
-
-				.option
-					.option__img
-						%img{:src => "images/inspirations/house/afzuigkap.jpg"}
-						%span budget
-					.option__content
-						%h3 Airline 900
-						%span € 239.-
-						%dl
-							%dt Energylabel
-							%dd C
-							%dt Garantie
-							%dd 2 jaar
-					.option__btn
-						= link_to "Sponsor URL", "#", :class => "button"
-
-				= link_to "Close", "#", :class => "popup-modal-dismiss"
-
-			#product2.white-popup-block.mfp-hide.zoom-anim-dialog
-				%h2 Kitchen high chair
-
-				.option
-					.option__img
-						%img{:src => "images/inspirations/house/afzuigkap.jpg"}
-						%span.ori original
-					.option__content
-						%h3 BOSCH
-						%span € 749.-
-						%dl
-							%dt Energylabel
-							%dd A
-							%dt Garantie
-							%dd 5 jaar
-					.option__btn
-						= link_to "Sponsor URL", "#", :class => "button"
-
-				.option
-					.option__img
-						%img{:src => "images/inspirations/house/afzuigkap.jpg"}
-						%span best for value
-					.option__content
-						%h3 MOLNIGT at IKEA
-						%span € 349.-
-						%dl
-							%dt Energylabel
-							%dd C
-							%dt Garantie
-							%dd 5 jaar
-					.option__btn
-						= link_to "Sponsor URL", "#", :class => "button"
-
-				.option
-					.option__img
-						%img{:src => "images/inspirations/house/afzuigkap.jpg"}
-						%span budget
-					.option__content
-						%h3 Airline 900
-						%span € 239.-
-						%dl
-							%dt Energylabel
-							%dd C
-							%dt Garantie
-							%dd 2 jaar
-					.option__btn
-						= link_to "Sponsor URL", "#", :class => "button"
-
-				= link_to "Close", "#", :class => "popup-modal-dismiss"
-
-			#product3.white-popup-block.mfp-hide.zoom-anim-dialog
-				%h2 Espresso machine
-
-				.option
-					.option__img
-						%img{:src => "images/inspirations/house/afzuigkap.jpg"}
-						%span.ori original
-					.option__content
-						%h3 BOSCH
-						%span € 749.-
-						%dl
-							%dt Energylabel
-							%dd A
-							%dt Garantie
-							%dd 5 jaar
-					.option__btn
-						= link_to "Sponsor URL", "#", :class => "button"
-
-				.option
-					.option__img
-						%img{:src => "images/inspirations/house/afzuigkap.jpg"}
-						%span best for value
-					.option__content
-						%h3 MOLNIGT at IKEA
-						%span € 349.-
-						%dl
-							%dt Energylabel
-							%dd C
-							%dt Garantie
-							%dd 5 jaar
-					.option__btn
-						= link_to "Sponsor URL", "#", :class => "button"
-
-				.option
-					.option__img
-						%img{:src => "images/inspirations/house/afzuigkap.jpg"}
-						%span budget
-					.option__content
-						%h3 Airline 900
-						%span € 239.-
-						%dl
-							%dt Energylabel
-							%dd C
-							%dt Garantie
-							%dd 2 jaar
-					.option__btn
-						= link_to "Sponsor URL", "#", :class => "button"
-
-				= link_to "Close", "#", :class => "popup-modal-dismiss"
+			%a.save{:href => "#"} Bewaar

@@ -67,7 +67,7 @@
 	background-color: cl("white");		
 	height: em(60px);
 	line-height: em(60px);
-	padding-bottom: em(35px);
+	padding-bottom: em(40px);
 
 	ul { @extend %clearlist; }
 	
@@ -320,10 +320,7 @@
 			a {
 				padding-top: em(10px);
 				padding-bottom: em(14px);
-
-				color: cl("white"); 
-				opacity: 0.7;
-				transition: opacity 0.2s;
+				color: cl("white");
 				position: relative;
 			}
 		}
