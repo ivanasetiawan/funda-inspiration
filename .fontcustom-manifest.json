@@ -1,0 +1,204 @@
+{
+  "checksum": {
+    "previous": "e8f15522d873f083776e01e9c7f65d31e476c93afe3e25f2eca621c3132d8303",
+    "current": "e8f15522d873f083776e01e9c7f65d31e476c93afe3e25f2eca621c3132d8303"
+  },
+  "fonts": [
+    "source/fonts/funda_e8f15522d873f083776e01e9c7f65d31.ttf",
+    "source/fonts/funda_e8f15522d873f083776e01e9c7f65d31.svg",
+    "source/fonts/funda_e8f15522d873f083776e01e9c7f65d31.woff",
+    "source/fonts/funda_e8f15522d873f083776e01e9c7f65d31.eot"
+  ],
+  "glyphs": {
+    "address-book": {
+      "codepoint": 62205,
+      "source": "source/icons/address-book.svg"
+    },
+    "arrow-down": {
+      "codepoint": 62187,
+      "source": "source/icons/arrow-down.svg"
+    },
+    "arrow-left": {
+      "codepoint": 62188,
+      "source": "source/icons/arrow-left.svg"
+    },
+    "arrow-right": {
+      "codepoint": 62189,
+      "source": "source/icons/arrow-right.svg"
+    },
+    "arrow-up": {
+      "codepoint": 62190,
+      "source": "source/icons/arrow-up.svg"
+    },
+    "bookmark": {
+      "codepoint": 62206,
+      "source": "source/icons/bookmark.svg"
+    },
+    "books": {
+      "codepoint": 62207,
+      "source": "source/icons/books.svg"
+    },
+    "calculator": {
+      "codepoint": 62208,
+      "source": "source/icons/calculator.svg"
+    },
+    "calendar": {
+      "codepoint": 62209,
+      "source": "source/icons/calendar.svg"
+    },
+    "camera": {
+      "codepoint": 62210,
+      "source": "source/icons/camera.svg"
+    },
+    "clock": {
+      "codepoint": 62211,
+      "source": "source/icons/clock.svg"
+    },
+    "close": {
+      "codepoint": 62191,
+      "source": "source/icons/close.svg"
+    },
+    "facebook": {
+      "codepoint": 62192,
+      "source": "source/icons/facebook.svg"
+    },
+    "file-pdf": {
+      "codepoint": 62212,
+      "source": "source/icons/file-pdf.svg"
+    },
+    "file-text": {
+      "codepoint": 62213,
+      "source": "source/icons/file-text.svg"
+    },
+    "film": {
+      "codepoint": 62214,
+      "source": "source/icons/film.svg"
+    },
+    "folder-download": {
+      "codepoint": 62215,
+      "source": "source/icons/folder-download.svg"
+    },
+    "google-plus": {
+      "codepoint": 62193,
+      "source": "source/icons/google-plus.svg"
+    },
+    "heart": {
+      "codepoint": 62216,
+      "source": "source/icons/heart.svg"
+    },
+    "images": {
+      "codepoint": 62217,
+      "source": "source/icons/images.svg"
+    },
+    "instagram": {
+      "codepoint": 62194,
+      "source": "source/icons/instagram.svg"
+    },
+    "key": {
+      "codepoint": 62218,
+      "source": "source/icons/key.svg"
+    },
+    "linkedin": {
+      "codepoint": 62195,
+      "source": "source/icons/linkedin.svg"
+    },
+    "location": {
+      "codepoint": 62196,
+      "source": "source/icons/location.svg"
+    },
+    "mail": {
+      "codepoint": 62197,
+      "source": "source/icons/mail.svg"
+    },
+    "menu": {
+      "codepoint": 62198,
+      "source": "source/icons/menu.svg"
+    },
+    "pencil": {
+      "codepoint": 62219,
+      "source": "source/icons/pencil.svg"
+    },
+    "phone": {
+      "codepoint": 62220,
+      "source": "source/icons/phone.svg"
+    },
+    "pinterest": {
+      "codepoint": 62199,
+      "source": "source/icons/pinterest.svg"
+    },
+    "play": {
+      "codepoint": 62200,
+      "source": "source/icons/play.svg"
+    },
+    "plus": {
+      "codepoint": 62201,
+      "source": "source/icons/plus.svg"
+    },
+    "printer": {
+      "codepoint": 62221,
+      "source": "source/icons/printer.svg"
+    },
+    "profile": {
+      "codepoint": 62222,
+      "source": "source/icons/profile.svg"
+    },
+    "search": {
+      "codepoint": 62202,
+      "source": "source/icons/search.svg"
+    },
+    "share": {
+      "codepoint": 62223,
+      "source": "source/icons/share.svg"
+    },
+    "star": {
+      "codepoint": 62224,
+      "source": "source/icons/star.svg"
+    },
+    "tags": {
+      "codepoint": 62225,
+      "source": "source/icons/tags.svg"
+    },
+    "twitter": {
+      "codepoint": 62203,
+      "source": "source/icons/twitter.svg"
+    },
+    "youtube": {
+      "codepoint": 62204,
+      "source": "source/icons/youtube.svg"
+    },
+    "zoom-in": {
+      "codepoint": 62226,
+      "source": "source/icons/zoom-in.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": "fontcustom.yml",
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "funda",
+    "force": false,
+    "input": {
+      "templates": "source/icons",
+      "vectors": "source/icons"
+    },
+    "no_hash": false,
+    "output": {
+      "css": "source/stylesheets/project/base",
+      "fonts": "source/fonts",
+      "preview": "source/fonts"
+    },
+    "preprocessor_path": "",
+    "quiet": false,
+    "templates": [
+      "scss"
+    ]
+  },
+  "templates": [
+    "source/stylesheets/project/base/_funda.scss"
+  ]
+}

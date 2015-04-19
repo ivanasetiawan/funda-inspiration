@@ -33,31 +33,6 @@
   list-style: none;
 }
 
-%spacing-equal {
-  padding: map-get($spacing-distance, "xs");
-
-  @include bp("sm+") {
-    padding: map-get($spacing-distance, "sm");
-  }
-}
-
-%arrow-red-left {
-  display: block;
-  position: relative;
-  padding-left: 1.5rem;
-  color: cl("grey-dark");
-  line-height: 1.5;
-  @extend .icon-arrow-right;
-
-  &:before {
-    font-size: 10px;
-    top: 0.5em;
-    left: 0;
-    position: absolute;
-    color: cl("red");
-  }
-}
-
 // Basic b-lazy setup
 .b-lazy {
   max-width: 100%;

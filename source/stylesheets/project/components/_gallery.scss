@@ -17,10 +17,6 @@
 		img { width: 100%; height: auto; }
 	}
 
-	&__info {
-		
-	}
-
 	&__btn {
 		width: 35px;
 		height: 35px;
@@ -107,13 +103,6 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-		.button { 
-			background: cl("funda-blue-light"); 
-			line-height: 1; 
-			&:hover {
-				background: cl("funda-blue-light");
-			}
-		}
 	}
 }
 

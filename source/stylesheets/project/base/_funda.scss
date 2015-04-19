@@ -1,49 +1,70 @@
 //
-// Icon Font: ahrend
+// Icon Font: funda
 //
 
 @font-face {
-  font-family: "ahrend";
-  src: font-url("ahrend_4a1e14657769f24f6f9c72f01390a142.eot");
-  src: font-url("ahrend_4a1e14657769f24f6f9c72f01390a142.eot?#iefix") format("embedded-opentype"),
-       font-url("ahrend_4a1e14657769f24f6f9c72f01390a142.woff") format("woff"),
-       font-url("ahrend_4a1e14657769f24f6f9c72f01390a142.ttf") format("truetype"),
-       font-url("ahrend_4a1e14657769f24f6f9c72f01390a142.svg#ahrend") format("svg");
+  font-family: "funda";
+  src: font-url("funda_e8f15522d873f083776e01e9c7f65d31.eot");
+  src: font-url("funda_e8f15522d873f083776e01e9c7f65d31.eot?#iefix") format("embedded-opentype"),
+       font-url("funda_e8f15522d873f083776e01e9c7f65d31.woff") format("woff"),
+       font-url("funda_e8f15522d873f083776e01e9c7f65d31.ttf") format("truetype"),
+       font-url("funda_e8f15522d873f083776e01e9c7f65d31.svg#funda") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
-    font-family: "ahrend";
-    src: url("ahrend_4a1e14657769f24f6f9c72f01390a142.svg#ahrend") format("svg");
+    font-family: "funda";
+    src: url("funda_e8f15522d873f083776e01e9c7f65d31.svg#funda") format("svg");
   }
 }
 
 [data-icon]:before { content: attr(data-icon); }
 
 [data-icon]:before,
-.icon-ahrend-logo:before,
+.icon-address-book:before,
 .icon-arrow-down:before,
 .icon-arrow-left:before,
 .icon-arrow-right:before,
 .icon-arrow-up:before,
+.icon-bookmark:before,
+.icon-books:before,
+.icon-calculator:before,
+.icon-calendar:before,
+.icon-camera:before,
+.icon-clock:before,
 .icon-close:before,
 .icon-facebook:before,
+.icon-file-pdf:before,
+.icon-file-text:before,
+.icon-film:before,
+.icon-folder-download:before,
 .icon-google-plus:before,
+.icon-heart:before,
+.icon-images:before,
 .icon-instagram:before,
+.icon-key:before,
 .icon-linkedin:before,
 .icon-location:before,
 .icon-mail:before,
 .icon-menu:before,
+.icon-pencil:before,
+.icon-phone:before,
 .icon-pinterest:before,
 .icon-play:before,
 .icon-plus:before,
+.icon-printer:before,
+.icon-profile:before,
 .icon-search:before,
+.icon-share:before,
+.icon-star:before,
+.icon-tags:before,
 .icon-twitter:before,
-.icon-youtube:before {
+.icon-youtube:before,
+.icon-zoom-in:before {
   display: inline-block;
-  font-family: "ahrend";
+  font-family: "funda";
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -56,42 +77,84 @@
   font-smoothing: antialiased;
 }
 
-.icon-ahrend-logo:before { content: "\f10e"; }
-.icon-arrow-down:before { content: "\f10f"; }
-.icon-arrow-left:before { content: "\f112"; }
-.icon-arrow-right:before { content: "\f107"; }
-.icon-arrow-up:before { content: "\f110"; }
-.icon-close:before { content: "\f10d"; }
-.icon-facebook:before { content: "\f100"; }
-.icon-google-plus:before { content: "\f105"; }
-.icon-instagram:before { content: "\f106"; }
-.icon-linkedin:before { content: "\f101"; }
-.icon-location:before { content: "\f111"; }
-.icon-mail:before { content: "\f108"; }
-.icon-menu:before { content: "\f109"; }
-.icon-pinterest:before { content: "\f102"; }
-.icon-play:before { content: "\f10a"; }
-.icon-plus:before { content: "\f10b"; }
-.icon-search:before { content: "\f10c"; }
-.icon-twitter:before { content: "\f103"; }
-.icon-youtube:before { content: "\f104"; }
+.icon-address-book:before { content: "\f2fd"; }
+.icon-arrow-down:before { content: "\f2eb"; }
+.icon-arrow-left:before { content: "\f2ec"; }
+.icon-arrow-right:before { content: "\f2ed"; }
+.icon-arrow-up:before { content: "\f2ee"; }
+.icon-bookmark:before { content: "\f2fe"; }
+.icon-books:before { content: "\f2ff"; }
+.icon-calculator:before { content: "\f300"; }
+.icon-calendar:before { content: "\f301"; }
+.icon-camera:before { content: "\f302"; }
+.icon-clock:before { content: "\f303"; }
+.icon-close:before { content: "\f2ef"; }
+.icon-facebook:before { content: "\f2f0"; }
+.icon-file-pdf:before { content: "\f304"; }
+.icon-file-text:before { content: "\f305"; }
+.icon-film:before { content: "\f306"; }
+.icon-folder-download:before { content: "\f307"; }
+.icon-google-plus:before { content: "\f2f1"; }
+.icon-heart:before { content: "\f308"; }
+.icon-images:before { content: "\f309"; }
+.icon-instagram:before { content: "\f2f2"; }
+.icon-key:before { content: "\f30a"; }
+.icon-linkedin:before { content: "\f2f3"; }
+.icon-location:before { content: "\f2f4"; }
+.icon-mail:before { content: "\f2f5"; }
+.icon-menu:before { content: "\f2f6"; }
+.icon-pencil:before { content: "\f30b"; }
+.icon-phone:before { content: "\f30c"; }
+.icon-pinterest:before { content: "\f2f7"; }
+.icon-play:before { content: "\f2f8"; }
+.icon-plus:before { content: "\f2f9"; }
+.icon-printer:before { content: "\f30d"; }
+.icon-profile:before { content: "\f30e"; }
+.icon-search:before { content: "\f2fa"; }
+.icon-share:before { content: "\f30f"; }
+.icon-star:before { content: "\f310"; }
+.icon-tags:before { content: "\f311"; }
+.icon-twitter:before { content: "\f2fb"; }
+.icon-youtube:before { content: "\f2fc"; }
+.icon-zoom-in:before { content: "\f312"; }
 
-$font-ahrend-ahrend-logo: "\f10e";
-$font-ahrend-arrow-down: "\f10f";
-$font-ahrend-arrow-left: "\f112";
-$font-ahrend-arrow-right: "\f107";
-$font-ahrend-arrow-up: "\f110";
-$font-ahrend-close: "\f10d";
-$font-ahrend-facebook: "\f100";
-$font-ahrend-google-plus: "\f105";
-$font-ahrend-instagram: "\f106";
-$font-ahrend-linkedin: "\f101";
-$font-ahrend-location: "\f111";
-$font-ahrend-mail: "\f108";
-$font-ahrend-menu: "\f109";
-$font-ahrend-pinterest: "\f102";
-$font-ahrend-play: "\f10a";
-$font-ahrend-plus: "\f10b";
-$font-ahrend-search: "\f10c";
-$font-ahrend-twitter: "\f103";
-$font-ahrend-youtube: "\f104";
+$font-funda-address-book: "\f2fd";
+$font-funda-arrow-down: "\f2eb";
+$font-funda-arrow-left: "\f2ec";
+$font-funda-arrow-right: "\f2ed";
+$font-funda-arrow-up: "\f2ee";
+$font-funda-bookmark: "\f2fe";
+$font-funda-books: "\f2ff";
+$font-funda-calculator: "\f300";
+$font-funda-calendar: "\f301";
+$font-funda-camera: "\f302";
+$font-funda-clock: "\f303";
+$font-funda-close: "\f2ef";
+$font-funda-facebook: "\f2f0";
+$font-funda-file-pdf: "\f304";
+$font-funda-file-text: "\f305";
+$font-funda-film: "\f306";
+$font-funda-folder-download: "\f307";
+$font-funda-google-plus: "\f2f1";
+$font-funda-heart: "\f308";
+$font-funda-images: "\f309";
+$font-funda-instagram: "\f2f2";
+$font-funda-key: "\f30a";
+$font-funda-linkedin: "\f2f3";
+$font-funda-location: "\f2f4";
+$font-funda-mail: "\f2f5";
+$font-funda-menu: "\f2f6";
+$font-funda-pencil: "\f30b";
+$font-funda-phone: "\f30c";
+$font-funda-pinterest: "\f2f7";
+$font-funda-play: "\f2f8";
+$font-funda-plus: "\f2f9";
+$font-funda-printer: "\f30d";
+$font-funda-profile: "\f30e";
+$font-funda-search: "\f2fa";
+$font-funda-share: "\f30f";
+$font-funda-star: "\f310";
+$font-funda-tags: "\f311";
+$font-funda-twitter: "\f2fb";
+$font-funda-youtube: "\f2fc";
+$font-funda-zoom-in: "\f312";

@@ -1,20 +1,23 @@
 .container.gallery.xs-pt-2
+	.row.gallery__intro
+		.xs-12.lg-8
+			%h2 Bloemgracht 81 IV
+			%p 1016 KH Amsterdam
+
+		.xs-12.lg-4
+			%a.button.button--save.right{:href => "#"} Bewaar
+
 	.row
-		%article.gallery-flickity.xs-mb-2
-	
+		%article.gallery-flickity.xs-mb-1
 			= partial "components/inspirations/gallery-1"
 			= partial "components/inspirations/gallery-2"
 			= partial "components/inspirations/gallery-3"
 			
 	.row.gallery__info
 		.xs-12.lg-8
-			%h2 Bloemgracht 81 IV
-			%span.postcode 1016 KH Amsterdam
 			%p 
 				Spectaculair, smaakvol en zeer comfortabel appartement van ca. 215 m2 met balkon zuid en 2 parkeerplaatsen op het mooiste stukje van de Bloemgracht. Uitzicht op de gracht aan de voorzijde en op de Westertoren aan de achterzijd...
 				= link_to "Meer over Bloemgracht 81 IV", '#'
 
 		.xs-12.lg-4
-			%p.price € 1.295.000 k.k.
-
-			%a.save{:href => "#"} Bewaar
+			%p.price.right € 1.295.000 k.k.
