@@ -44,6 +44,10 @@
 		&:hover {
 			transition: all 0.2s;
 			&:after { animation: none; }
+
+			.infobox {
+				opacity: 1;
+			}
 		}
 
 		.icon-search {
@@ -52,6 +56,20 @@
 			position: relative;
 		}
 		
+		.infobox {
+			opacity: 0;
+			transition: opacity 0.2s;
+			background: rgba(255, 255, 255, 0.7);
+			padding: 10px;
+			min-width: 100px;
+			max-width: 200px;
+			text-align: left;
+			line-height: 1;
+			position: absolute;
+			top: 45px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
 	}
 }
 
