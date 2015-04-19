@@ -4,11 +4,11 @@
 
 @font-face {
   font-family: "funda";
-  src: font-url("funda_e8f15522d873f083776e01e9c7f65d31.eot");
-  src: font-url("funda_e8f15522d873f083776e01e9c7f65d31.eot?#iefix") format("embedded-opentype"),
-       font-url("funda_e8f15522d873f083776e01e9c7f65d31.woff") format("woff"),
-       font-url("funda_e8f15522d873f083776e01e9c7f65d31.ttf") format("truetype"),
-       font-url("funda_e8f15522d873f083776e01e9c7f65d31.svg#funda") format("svg");
+  src: font-url("funda_17f7fa18d3304cdaade4192bca3966c8.eot");
+  src: font-url("funda_17f7fa18d3304cdaade4192bca3966c8.eot?#iefix") format("embedded-opentype"),
+       font-url("funda_17f7fa18d3304cdaade4192bca3966c8.woff") format("woff"),
+       font-url("funda_17f7fa18d3304cdaade4192bca3966c8.ttf") format("truetype"),
+       font-url("funda_17f7fa18d3304cdaade4192bca3966c8.svg#funda") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -16,7 +16,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "funda";
-    src: url("funda_e8f15522d873f083776e01e9c7f65d31.svg#funda") format("svg");
+    src: url("funda_17f7fa18d3304cdaade4192bca3966c8.svg#funda") format("svg");
   }
 }
 
@@ -30,6 +30,7 @@
 .icon-arrow-up:before,
 .icon-bookmark:before,
 .icon-books:before,
+.icon-bulb:before,
 .icon-calculator:before,
 .icon-calendar:before,
 .icon-camera:before,
@@ -84,6 +85,7 @@
 .icon-arrow-up:before { content: "\f2ee"; }
 .icon-bookmark:before { content: "\f2fe"; }
 .icon-books:before { content: "\f2ff"; }
+.icon-bulb:before { content: "\f313"; }
 .icon-calculator:before { content: "\f300"; }
 .icon-calendar:before { content: "\f301"; }
 .icon-camera:before { content: "\f302"; }
@@ -125,6 +127,7 @@ $font-funda-arrow-right: "\f2ed";
 $font-funda-arrow-up: "\f2ee";
 $font-funda-bookmark: "\f2fe";
 $font-funda-books: "\f2ff";
+$font-funda-bulb: "\f313";
 $font-funda-calculator: "\f300";
 $font-funda-calendar: "\f301";
 $font-funda-camera: "\f302";

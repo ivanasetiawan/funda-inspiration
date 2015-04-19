@@ -81,8 +81,22 @@
 </nav>
 </header>
 
-<!-- .site-wrapper{:class => page_classes} -->
-<!-- = yield -->
+<div class='index site-wrapper'>
+<div class='container'>
+<article>
+<div class='hero'>
+<a href="/inspiration-overview.html"><h2>Check our new Inspiration page.</h2>
+<p>Create an account and keep track! Share, discover, and find out where to buy.</p>
+</a></div>
+</article>
+
+<img src='images/funda-home.jpg'>
+</div>
+<!-- = partial "components/blocks", locals: { type: 1 } -->
+<!-- = partial "components/quote", locals: { full: false, quote: data.quotes.first } -->
+<!-- = partial "components/articles", locals: { title: "Uit ons journal", articles: data.articles.journal } -->
+
+</div>
 <!-- = partial "partials/footer" -->
 <script src="/javascripts/all.js" type="text/javascript"></script>
 </body>

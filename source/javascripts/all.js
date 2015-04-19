@@ -8,10 +8,13 @@ $(document).ready(function() {
 
 	////////
 	// Flickity
-	var flkty = new Flickity( '.gallery-flickity', {
-		freeScroll: true,
-		wrapAround: true
-	});
+	if ( $( ".gallery-flickity" ).length ) {
+		var flkty = new Flickity( '.gallery-flickity', {
+			freeScroll: true,
+			wrapAround: true
+		});		
+	}
+
 	////////
 
 	////////

@@ -4,10 +4,5 @@ title: Funda
 
 .container
 	= partial "components/hero"
+
 	%img{:src => "images/funda-home.jpg"}
-
-	
-/ = partial "components/blocks", locals: { type: 1 }
-/ = partial "components/quote", locals: { full: false, quote: data.quotes.first }
-/ = partial "components/articles", locals: { title: "Uit ons journal", articles: data.articles.journal }
-

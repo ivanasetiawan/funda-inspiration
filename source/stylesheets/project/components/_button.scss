@@ -16,6 +16,10 @@
     &:before { margin-right: 10px; }
   }
 
+  &--blue {
+    background: cl("funda-blue-dark");
+  }
+
   &:hover {
     color: cl("white");
     background: cl("funda-blue-dark");

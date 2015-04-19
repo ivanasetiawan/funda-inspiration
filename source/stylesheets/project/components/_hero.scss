@@ -2,8 +2,48 @@
 	background: rgba(115, 207, 247, 0.2);
 	padding: em(10px);
 	margin: em(20px) 0;
-	a { color: cl("black"); }
+	transition: background 0.2s;
+	position: relative;
+
+	&:hover {
+		background: rgba(115, 207, 247, 0.32);
+
+		.hero__button { background: cl("funda-orange"); }
+	}
+
+	&__icon {
+		display: none;
+		@include bp("md+") {
+			display: inline-block;
+			width: 70px;
+			font-size: 50px;
+			vertical-align: top;
+			margin-top: 10px;
+			margin-left: 10px;
+			color: cl("funda-blue-dark");
+		}
+	}
+
+	&__content {
+		@include bp("md+") {
+			display: inline-block;
+		}
+	}
+
+	&__button {
+		margin-top: 10px; 
+		@include bp("md+") {
+			position: absolute;
+			top: 50%;
+			right: 30px;
+			margin-top: -16px;
+		}
+	}
+
+	a { color: cl("black"); display: block; }
+	
 	h2, p { margin: 0; }
+		
 	@include bp("md+") { 
 		padding: em(20px); 
 		margin: em(40px) 0;

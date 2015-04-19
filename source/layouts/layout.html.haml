@@ -9,8 +9,6 @@
 
     = partial "partials/favicons"
     = stylesheet_link_tag :application
-    / = stylesheet_link_tag :application, :media => "none", :onload => "if(media!='all')media='all'"
-
     
   %body
     
@@ -19,6 +17,6 @@
     .site-wrapper{:class => page_classes}
       = yield
       
-    / = partial "partials/footer"
+    = partial "partials/footer"
 
     = javascript_include_tag :all

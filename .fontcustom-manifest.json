@@ -1,13 +1,13 @@
 {
   "checksum": {
-    "previous": "e8f15522d873f083776e01e9c7f65d31e476c93afe3e25f2eca621c3132d8303",
-    "current": "e8f15522d873f083776e01e9c7f65d31e476c93afe3e25f2eca621c3132d8303"
+    "previous": "17f7fa18d3304cdaade4192bca3966c8ad094b6fd04b73d3d38001579ce30e83",
+    "current": "17f7fa18d3304cdaade4192bca3966c8ad094b6fd04b73d3d38001579ce30e83"
   },
   "fonts": [
-    "source/fonts/funda_e8f15522d873f083776e01e9c7f65d31.ttf",
-    "source/fonts/funda_e8f15522d873f083776e01e9c7f65d31.svg",
-    "source/fonts/funda_e8f15522d873f083776e01e9c7f65d31.woff",
-    "source/fonts/funda_e8f15522d873f083776e01e9c7f65d31.eot"
+    "source/fonts/funda_17f7fa18d3304cdaade4192bca3966c8.ttf",
+    "source/fonts/funda_17f7fa18d3304cdaade4192bca3966c8.svg",
+    "source/fonts/funda_17f7fa18d3304cdaade4192bca3966c8.woff",
+    "source/fonts/funda_17f7fa18d3304cdaade4192bca3966c8.eot"
   ],
   "glyphs": {
     "address-book": {
@@ -37,6 +37,10 @@
     "books": {
       "codepoint": 62207,
       "source": "source/icons/books.svg"
+    },
+    "bulb": {
+      "codepoint": 62227,
+      "source": "source/icons/bulb.svg"
     },
     "calculator": {
       "codepoint": 62208,
